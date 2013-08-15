@@ -30,7 +30,7 @@ public class Find implements OperationsInterface {
                 result.add(student);
                 break;
             }
-            if (name)
+//            if (name)
 //            for (String nameSurnameUniversity : values) {
 //                if(nameSurnameUniversity.equals(student.))
 //            }
