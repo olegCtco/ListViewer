@@ -32,9 +32,9 @@ public class ListViewer implements ListOfOperations {
             for (int i = 0; i < listOfOperations.size(); i++) {
 //                System.out.println("Test "+values.get(0));
                 if (listOfOperations.get(i).getOperation().equals(values.get(0))) {
-                    for (String s : values) {
+//                    for (String s : values) {
 //                        System.out.println("SS "+s);
-                    }
+//                    }
                     studentList = (List<Student>) listOfOperations.get(i).doOperation(studentList, values);
                 }
             }
