@@ -1,5 +1,6 @@
 package lv.ctco.ListViewerKVO.operations;
 
+import lv.ctco.ListViewerKVO.Checker;
 import lv.ctco.ListViewerKVO.Student;
 
 import java.util.List;
@@ -12,6 +13,12 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class Remove implements OperationsInterface {
+    Checker checker;
+
+    public Remove() {
+        checker=new Checker();
+    }
+
     @Override
     public String getOperation() {
         return "remove";
@@ -19,7 +26,10 @@ public class Remove implements OperationsInterface {
 
     @Override
     public Object doOperation(List<Student> studentList, List<String> values) {
-//        return add(values);
-        return null;
+        int indexDelete=Integer.parseInt(values.get(1))-1;
+        if(!checker.outOfBound(studentList, indexDelete)){
+            studentList.remove(indexDelete);
+        }
+        return studentList;
     }
 }

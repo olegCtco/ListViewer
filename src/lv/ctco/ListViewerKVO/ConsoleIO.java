@@ -1,8 +1,10 @@
 package lv.ctco.ListViewerKVO;
 
+import lv.ctco.ListViewerKVO.operations.Remove;
 import lv.ctco.ListViewerKVO.operationsIO.AddIO;
 import lv.ctco.ListViewerKVO.operationsIO.ExitIO;
 import lv.ctco.ListViewerKVO.operationsIO.OperationIOinterface;
+import lv.ctco.ListViewerKVO.operationsIO.RemoveIO;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -27,7 +29,7 @@ public class ConsoleIO {
     public ConsoleIO() {
         inputStreamReader = new InputStreamReader(System.in);
         bf = new BufferedReader(inputStreamReader);
-        operationsIO = Arrays.asList((OperationIOinterface) new AddIO("add"), (OperationIOinterface) new ExitIO("exit"));
+        operationsIO = Arrays.asList((OperationIOinterface) new AddIO("add"), (OperationIOinterface) new ExitIO("exit"),(OperationIOinterface) new RemoveIO());
 
     }
 

@@ -1,5 +1,7 @@
 package lv.ctco.ListViewerKVO;
 
+import java.util.List;
+
 public class Checker implements ListOfOperations {
 
     public boolean checkOperation(String operation) {
@@ -22,5 +24,21 @@ public class Checker implements ListOfOperations {
             return true;
         else
             return false;
+    }
+    public boolean notANumber(String index){
+        try{
+            Integer.parseInt(index);
+            return false;
+        }catch(NumberFormatException e){
+            return true;
+        }
+
+    }
+    public boolean outOfBound(List<Student> studentList, int indexOfDelete){
+
+        if(indexOfDelete>-1&&indexOfDelete<studentList.size()){
+            return false;
+        }
+        return false;
     }
 }
