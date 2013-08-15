@@ -12,14 +12,14 @@ import java.util.List;
  * Time: 12:30 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Find /*implements OperationsInterface*/ {
+public class Find implements OperationsInterface {
 
-//    @Override
-//    public String getOperation() {
-//        return "find";
-//    }
-//
-//    @Override
+    @Override
+    public String getOperation() {
+        return "find";
+    }
+
+    @Override
     public List<Student> doOperation(List<Student> studentList, List<String> values) {
         String name = values.get(0);
         String surname = values.get(1);
@@ -30,6 +30,7 @@ public class Find /*implements OperationsInterface*/ {
                 result.add(student);
                 break;
             }
+            if (name)
 //            for (String nameSurnameUniversity : values) {
 //                if(nameSurnameUniversity.equals(student.))
 //            }

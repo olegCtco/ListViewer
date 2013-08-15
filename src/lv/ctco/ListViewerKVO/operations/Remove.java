@@ -16,7 +16,7 @@ public class Remove implements OperationsInterface {
     Checker checker;
 
     public Remove() {
-        checker=new Checker();
+        checker = new Checker();
     }
 
     @Override
@@ -26,8 +26,8 @@ public class Remove implements OperationsInterface {
 
     @Override
     public Object doOperation(List<Student> studentList, List<String> values) {
-        int indexDelete=Integer.parseInt(values.get(1))-1;
-        if(!checker.outOfBound(studentList, indexDelete)){
+        int indexDelete = Integer.parseInt(values.get(1)) - 1;
+        if (!checker.outOfBound(studentList, indexDelete)) {
             studentList.remove(indexDelete);
         }
         return studentList;

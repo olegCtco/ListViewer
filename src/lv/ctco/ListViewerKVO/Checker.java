@@ -25,18 +25,20 @@ public class Checker implements ListOfOperations {
         else
             return false;
     }
-    public boolean notANumber(String index){
-        try{
+
+    public boolean notANumber(String index) {
+        try {
             Integer.parseInt(index);
             return false;
-        }catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             return true;
         }
 
     }
-    public boolean outOfBound(List<Student> studentList, int indexOfDelete){
 
-        if(indexOfDelete>=0&&indexOfDelete<studentList.size()){
+    public boolean outOfBound(List<Student> studentList, int indexOfDelete) {
+
+        if (indexOfDelete >= 0 && indexOfDelete < studentList.size()) {
             return false;
         }
         return true;

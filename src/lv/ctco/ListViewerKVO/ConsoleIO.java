@@ -1,6 +1,5 @@
 package lv.ctco.ListViewerKVO;
 
-import lv.ctco.ListViewerKVO.operations.Remove;
 import lv.ctco.ListViewerKVO.operationsIO.*;
 
 import java.io.BufferedReader;
@@ -26,7 +25,7 @@ public class ConsoleIO {
     public ConsoleIO() {
         inputStreamReader = new InputStreamReader(System.in);
         bf = new BufferedReader(inputStreamReader);
-        operationsIO = Arrays.asList((OperationIOinterface) new AddIO("add"), (OperationIOinterface) new ExitIO("exit"),(OperationIOinterface) new RemoveIO(), (OperationIOinterface) new FindIO());
+        operationsIO = Arrays.asList((OperationIOinterface) new AddIO("add"), (OperationIOinterface) new ExitIO("exit"), (OperationIOinterface) new RemoveIO(), (OperationIOinterface) new FindIO());
 
     }
 
@@ -70,18 +69,20 @@ public class ConsoleIO {
     public List<String> readFromConsole() {
         String operation;
         List<String> values = new ArrayList<String>();
+        String operationMnemonic;
         while (true) try {
             menu();
             operation = bf.readLine();
             values.add(operation);
             if (checker.checkOperation(operation)) {
                 for (int i = 0; i < operationsIO.size(); i++) {
-                    if (operationsIO.get(i).getMnemonics().equals(operation)) {
+                    operationMnemonic = operationsIO.get(i).getMnemonics();
+                    if (operationMnemonic.equals(operation)) {
                         String[] returnedValues = operationsIO.get(i).doOperationIO();
                         if (returnedValues != null) {
                             for (String x : returnedValues) {
                                 values.add(x);
-//                                System.out.println("L "+x);
+
                             }
                         }
                     }

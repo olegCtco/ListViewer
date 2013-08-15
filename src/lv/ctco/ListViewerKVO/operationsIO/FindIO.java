@@ -11,14 +11,15 @@ import java.io.InputStreamReader;
  * Time: 00:51
  * To change this template use File | Settings | File Templates.
  */
-public class FindIO implements OperationIOinterface{
+public class FindIO implements OperationIOinterface {
     BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+
     @Override
     public String[] doOperationIO() {
         String name = "";
         String surname = "";
         String university = "";
-        String[] values = new String[4];
+        String[] values = new String[3];
         try {
             System.out.println("Input name:");
             name = bf.readLine();

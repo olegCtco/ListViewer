@@ -1,12 +1,11 @@
 package lv.ctco.ListViewerKVO;
 
-import lv.ctco.ListViewerKVO.operations.FindFactory;
-//import lv.ctco.ListViewerKVO.operationsIO.FindIOFactory;
 import lv.ctco.ListViewerKVO.operationsIO.ViewIO;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+
+//import lv.ctco.ListViewerKVO.operationsIO.FindIOFactory;
 
 /**
  * Created with IntelliJ IDEA.
