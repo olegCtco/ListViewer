@@ -18,4 +18,10 @@ public class Checker implements ListOfOperations {
             return true;
         return false;
     }
+    public boolean operationSuccess(String value){
+        if(value.equals("true"))
+            return true;
+        else
+            return false;
+    }
 }

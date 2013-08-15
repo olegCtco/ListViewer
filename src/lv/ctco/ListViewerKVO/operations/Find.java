@@ -2,6 +2,7 @@ package lv.ctco.ListViewerKVO.operations;
 
 import lv.ctco.ListViewerKVO.Student;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,7 +21,15 @@ public class Find implements OperationsInterface{
 
     @Override
     public Object doOperation(List<Student> studentList,List<String> values) {
-//        return add(values);
+//        String name=values.get(0);
+//        String surname=values.get(1);
+//        String university=values.get(2);
+        List<Student> result=new ArrayList<Student>();
+        for(Student student:studentList){
+            for(String nameSurnameUniversity:values){
+//                if(nameSurnameUniversity.equals(student.))
+            }
+        }
         return null;
     }
 }

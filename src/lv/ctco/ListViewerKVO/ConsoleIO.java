@@ -1,6 +1,8 @@
 package lv.ctco.ListViewerKVO;
 
 import lv.ctco.ListViewerKVO.operationsIO.AddIO;
+import lv.ctco.ListViewerKVO.operationsIO.ExitIO;
+import lv.ctco.ListViewerKVO.operationsIO.OperationIOinterface;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,12 +22,12 @@ public class ConsoleIO {
     BufferedReader bf;
     InputStreamReader inputStreamReader;
     Checker checker = new Checker();
-    List<Object> operationsIO;
+    List<OperationIOinterface> operationsIO;
 
     public ConsoleIO() {
         inputStreamReader = new InputStreamReader(System.in);
         bf = new BufferedReader(inputStreamReader);
-        operationsIO= Arrays.asList((Object)new AddIO("add"));
+        operationsIO= Arrays.asList((OperationIOinterface)new AddIO("add"),(OperationIOinterface)new ExitIO("exit"));
 
     }
 
@@ -40,31 +42,31 @@ public class ConsoleIO {
                 "\n 6. To exit type EXIT");
     }
 
-    public String[] addIO() {
-        String name = "";
-        String surname = "";
-        String university = "";
-        String [] values=new String[3];
-        try {
-            while (checker.checkIfEmptyString(name)) {
-                System.out.println("Input name:");
-                name = bf.readLine();
-            }
-            values[0]=name;
-            while (checker.checkIfEmptyString(surname)) {
-                System.out.println("Input surname:");
-                surname = bf.readLine();
-            }
-            values[1]=surname;
-            while (checker.checkIfEmptyString(university)) {
-                System.out.println("Input university");
-                university = bf.readLine();
-            }
-            values[2]=university;
-        } catch (IOException e) {
-        }
-        return values;
-    }
+//    public String[] addIO() {
+//        String name = "";
+//        String surname = "";
+//        String university = "";
+//        String [] values=new String[3];
+//        try {
+//            while (checker.checkIfEmptyString(name)) {
+//                System.out.println("Input name:");
+//                name = bf.readLine();
+//            }
+//            values[0]=name;
+//            while (checker.checkIfEmptyString(surname)) {
+//                System.out.println("Input surname:");
+//                surname = bf.readLine();
+//            }
+//            values[1]=surname;
+//            while (checker.checkIfEmptyString(university)) {
+//                System.out.println("Input university");
+//                university = bf.readLine();
+//            }
+//            values[2]=university;
+//        } catch (IOException e) {
+//        }
+//        return values;
+//    }
 
     public List<String> readFromConsole() {
         String operation;
@@ -74,8 +76,16 @@ public class ConsoleIO {
             operation = bf.readLine();
             if (checker.checkOperation(operation)) {
                 values.add(operation);
-                for(String x:addIO()){
-                    values.add(x);
+                for(int i=0;i<operationsIO.size();i++){
+                    if(operationsIO.get(i).getMnemonics().equals(operation)){
+                        String [] returnedValues=operationsIO.get(i).doOperationIO();
+                        if(returnedValues!=null){
+                            for(String x:returnedValues){
+                                values.add(x);
+//                                System.out.println("L "+x);
+                            }
+                        }
+                    }
                 }
                 return values;
             }

@@ -19,7 +19,6 @@ public class View implements OperationsInterface{
 
     @Override
     public Object doOperation(List<Student> studentList,List<String> values) {
-//        return add(values);
-        return null;
+        return studentList;
     }
 }

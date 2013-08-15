@@ -11,10 +11,7 @@ import java.util.List;
  * Time: 1:41 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Exit implements OperationsInterface{
-    public void quit(){
-        System.exit(0);
-    }
+public class Exit implements OperationsInterface {
 
     @Override
     public String getOperation() {
@@ -22,8 +19,11 @@ public class Exit implements OperationsInterface{
     }
 
     @Override
-    public Object doOperation(List<Student> studentList,List<String> values) {
-//        return add(values);
+    public Object doOperation(List<Student> studentList, List<String> values) {
+        if (values.size()==2) {
+            System.exit(0);
+        }
         return null;
+
     }
 }
