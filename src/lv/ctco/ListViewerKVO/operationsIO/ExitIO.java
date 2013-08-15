@@ -25,7 +25,7 @@ public class ExitIO implements OperationIOinterface {
         String[] exit = new String[1];
         while (true) {
             try {
-                System.out.println("Are you sure you want exit?");
+                System.out.println("Are you sure you want exit?('Y' if yes)");
                 String choice = bf.readLine();
                 if (choice.equalsIgnoreCase("Y")) {
                     exit[0] = "exit";

@@ -1,5 +1,9 @@
 package lv.ctco.ListViewerKVO.operationsIO;
 
+import lv.ctco.ListViewerKVO.Student;
+
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: butross
@@ -7,15 +11,15 @@ package lv.ctco.ListViewerKVO.operationsIO;
  * Time: 5:50 PM
  * To change this template use File | Settings | File Templates.
  */
-public class ViewIO implements OperationIOinterface {
-    @Override
-    public String[] doOperationIO() {
-
-        return new String[0];  //To change body of implemented methods use File | Settings | File Templates.
-    }
-
-    @Override
-    public String getMnemonics() {
-        return "view";  //To change body of implemented methods use File | Settings | File Templates.
+public class ViewIO {
+    public void doOperationIO(List<Student> studentList) {
+int id=0;
+        if (studentList.size() != 0) {
+            for (int i = 0; i < studentList.size(); i++) {
+                System.out.println(++id + ". " + studentList.get(i));
+            }
+        }  else{
+            System.out.println("Student list now is empty");
+        }
     }
 }

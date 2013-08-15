@@ -20,7 +20,7 @@ public class Exit implements OperationsInterface {
 
     @Override
     public Object doOperation(List<Student> studentList, List<String> values) {
-        if (values.size() == 2) {
+        if (values.size() > 1) {
             System.exit(0);
         }
         return null;

@@ -1,5 +1,7 @@
 package lv.ctco.ListViewerKVO;
 
+import lv.ctco.ListViewerKVO.operationsIO.ViewIO;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,18 +31,15 @@ public class ListViewer implements ListOfOperations {
     public void start() {
         while (true) {
             values = consoleIO.readFromConsole();
+            if(values.get(0).equalsIgnoreCase("view")){
+                new ViewIO().doOperationIO(studentList);
+            }
             for (int i = 0; i < listOfOperations.size(); i++) {
-//                System.out.println("Test "+values.get(0));
                 if (listOfOperations.get(i).getOperation().equals(values.get(0))) {
-//                    for (String s : values) {
-//                        System.out.println("SS "+s);
-//                    }
                     studentList = (List<Student>) listOfOperations.get(i).doOperation(studentList, values);
                 }
             }
 
-//            for (Student student : studentList)
-//                System.out.println(student);
         }
     }
 }

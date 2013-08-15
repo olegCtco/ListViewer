@@ -74,8 +74,8 @@ public class ConsoleIO {
         while (true) try {
             menu();
             operation = bf.readLine();
+            values.add(operation);
             if (checker.checkOperation(operation)) {
-                values.add(operation);
                 for (int i = 0; i < operationsIO.size(); i++) {
                     if (operationsIO.get(i).getMnemonics().equals(operation)) {
                         String[] returnedValues = operationsIO.get(i).doOperationIO();
@@ -87,8 +87,12 @@ public class ConsoleIO {
                         }
                     }
                 }
+            } else if (operation.equalsIgnoreCase("view")) {
                 return values;
+            } else {
+                System.out.println("No such command!!!");
             }
+            return values;
         } catch (IOException e) {
             e.printStackTrace();
         }

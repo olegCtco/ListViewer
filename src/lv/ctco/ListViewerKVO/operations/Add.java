@@ -29,9 +29,6 @@ public class Add implements OperationsInterface {
     public Object doOperation(List<Student> studentList, List<String> values) {
         Student student = new Student(values.get(1), values.get(2), values.get(3));
         studentList.add(student);
-        for (Student st : studentList)
-            System.out.print(st);
-        System.out.println();
         return studentList;
     }
 }
