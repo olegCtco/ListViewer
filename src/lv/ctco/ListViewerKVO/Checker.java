@@ -36,9 +36,9 @@ public class Checker implements ListOfOperations {
     }
     public boolean outOfBound(List<Student> studentList, int indexOfDelete){
 
-        if(indexOfDelete>0&&indexOfDelete<studentList.size()+1){
+        if(indexOfDelete>=0&&indexOfDelete<studentList.size()){
             return false;
         }
-        return false;
+        return true;
     }
 }
