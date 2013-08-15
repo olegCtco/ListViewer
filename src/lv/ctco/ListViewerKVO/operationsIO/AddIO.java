@@ -12,7 +12,7 @@ import java.io.IOException;
  * To change this template use File | Settings | File Templates.
  */
 public class AddIO implements OperationIOinterface {
-    Checker checker;
+    private Checker checker;
     private String mnemonics;
 
     public AddIO(String mnemonics) {
