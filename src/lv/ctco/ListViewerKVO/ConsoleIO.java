@@ -19,10 +19,10 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class ConsoleIO {
-    BufferedReader bf;
-    InputStreamReader inputStreamReader;
-    Checker checker = new Checker();
-    List<OperationIOinterface> operationsIO;
+    private BufferedReader bf;
+    private InputStreamReader inputStreamReader;
+    private Checker checker = new Checker();
+    private List<OperationIOinterface> operationsIO;
 
     public ConsoleIO() {
         inputStreamReader = new InputStreamReader(System.in);

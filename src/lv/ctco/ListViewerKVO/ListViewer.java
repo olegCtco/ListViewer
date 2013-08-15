@@ -13,10 +13,10 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class ListViewer implements ListOfOperations {
-    List<Student> studentList;   //package-private??
-    ConsoleIO consoleIO;
-    List<String> values;
-    Checker checker;
+    private List<Student> studentList;   //package-private??
+    private ConsoleIO consoleIO;
+    private List<String> values;
+    private Checker checker;
 
     public ListViewer() {
         studentList = new ArrayList<Student>();
