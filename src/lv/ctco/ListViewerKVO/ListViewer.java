@@ -1,8 +1,11 @@
 package lv.ctco.ListViewerKVO;
 
+import lv.ctco.ListViewerKVO.operations.FindFactory;
+import lv.ctco.ListViewerKVO.operationsIO.FindIOFactory;
 import lv.ctco.ListViewerKVO.operationsIO.ViewIO;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -31,8 +34,11 @@ public class ListViewer implements ListOfOperations {
     public void start() {
         while (true) {
             values = consoleIO.readFromConsole();
-            if(values.get(0).equalsIgnoreCase("view")){
+            if (values.get(0).equalsIgnoreCase("view")) {
                 new ViewIO().doOperationIO(studentList);
+            }
+            if (values.get(0).equalsIgnoreCase("find")) {
+                new ViewIO().doOperationIO(FindFactory.factoryInitFind().doOperation(studentList, Arrays.asList(FindIOFactory.factoryInitFind().doOperationIO())));
             }
             for (int i = 0; i < listOfOperations.size(); i++) {
                 if (listOfOperations.get(i).getOperation().equals(values.get(0))) {

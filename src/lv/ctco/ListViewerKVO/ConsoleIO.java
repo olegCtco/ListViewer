@@ -91,6 +91,8 @@ public class ConsoleIO {
                 }
             } else if (operation.equalsIgnoreCase("view")) {
                 return values;
+            } else if (operation.equalsIgnoreCase("find")) {
+                return values;
             } else {
                 System.out.println("No such command!!!");
             }

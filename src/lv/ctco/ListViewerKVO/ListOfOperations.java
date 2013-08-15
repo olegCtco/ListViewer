@@ -13,5 +13,5 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface ListOfOperations {
-    List<OperationsInterface> listOfOperations = Arrays.asList(new Add(), new Find(), new Remove(), new Sort(), new Exit());
+    List<OperationsInterface> listOfOperations = Arrays.asList(new Add()/*, new Find()*/, new Remove(), new Sort(), new Exit());
 }
