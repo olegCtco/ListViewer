@@ -1,4 +1,4 @@
-import lv.ctco.ListViewerKVO.ListViewer;
+import lv.ctco.ListViewerKVO.ListViewerFactory;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,6 +9,6 @@ import lv.ctco.ListViewerKVO.ListViewer;
  */
 public class Main {
     public static void main(String[] args) {
-        new ListViewer().start();
+        ListViewerFactory.factoryInitListViewer().start();
     }
 }
