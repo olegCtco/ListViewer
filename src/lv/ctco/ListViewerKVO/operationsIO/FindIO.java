@@ -11,9 +11,9 @@ import java.io.InputStreamReader;
  * Time: 00:51
  * To change this template use File | Settings | File Templates.
  */
-public class FindIO {
+public class FindIO implements OperationIOinterface{
     BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-
+    @Override
     public String[] doOperationIO() {
         String name = "";
         String surname = "";
@@ -32,5 +32,10 @@ public class FindIO {
         } catch (IOException e) {
         }
         return values;
+    }
+
+    @Override
+    public String getMnemonics() {
+        return "find";  //To change body of implemented methods use File | Settings | File Templates.
     }
 }

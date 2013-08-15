@@ -1,10 +1,7 @@
 package lv.ctco.ListViewerKVO;
 
 import lv.ctco.ListViewerKVO.operations.Remove;
-import lv.ctco.ListViewerKVO.operationsIO.AddIO;
-import lv.ctco.ListViewerKVO.operationsIO.ExitIO;
-import lv.ctco.ListViewerKVO.operationsIO.OperationIOinterface;
-import lv.ctco.ListViewerKVO.operationsIO.RemoveIO;
+import lv.ctco.ListViewerKVO.operationsIO.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -29,7 +26,7 @@ public class ConsoleIO {
     public ConsoleIO() {
         inputStreamReader = new InputStreamReader(System.in);
         bf = new BufferedReader(inputStreamReader);
-        operationsIO = Arrays.asList((OperationIOinterface) new AddIO("add"), (OperationIOinterface) new ExitIO("exit"),(OperationIOinterface) new RemoveIO());
+        operationsIO = Arrays.asList((OperationIOinterface) new AddIO("add"), (OperationIOinterface) new ExitIO("exit"),(OperationIOinterface) new RemoveIO(), (OperationIOinterface) new FindIO());
 
     }
 
@@ -91,9 +88,11 @@ public class ConsoleIO {
                 }
             } else if (operation.equalsIgnoreCase("view")) {
                 return values;
-            } else if (operation.equalsIgnoreCase("find")) {
-                return values;
-            } else {
+            }
+//            else if (operation.equalsIgnoreCase("find")) {
+//                return values;
+//            }
+            else {
                 System.out.println("No such command!!!");
             }
             return values;
