@@ -1,4 +1,3 @@
-import lv.ctco.ListViewerKVO.ConsoleIO;
 import lv.ctco.ListViewerKVO.ListViewer;
 
 /**

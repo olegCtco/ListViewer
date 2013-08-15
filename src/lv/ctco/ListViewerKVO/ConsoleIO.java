@@ -27,7 +27,7 @@ public class ConsoleIO {
     public ConsoleIO() {
         inputStreamReader = new InputStreamReader(System.in);
         bf = new BufferedReader(inputStreamReader);
-        operationsIO= Arrays.asList((OperationIOinterface)new AddIO("add"),(OperationIOinterface)new ExitIO("exit"));
+        operationsIO = Arrays.asList((OperationIOinterface) new AddIO("add"), (OperationIOinterface) new ExitIO("exit"));
 
     }
 
@@ -70,17 +70,17 @@ public class ConsoleIO {
 
     public List<String> readFromConsole() {
         String operation;
-        List<String> values= new ArrayList <String>();
+        List<String> values = new ArrayList<String>();
         while (true) try {
             menu();
             operation = bf.readLine();
             if (checker.checkOperation(operation)) {
                 values.add(operation);
-                for(int i=0;i<operationsIO.size();i++){
-                    if(operationsIO.get(i).getMnemonics().equals(operation)){
-                        String [] returnedValues=operationsIO.get(i).doOperationIO();
-                        if(returnedValues!=null){
-                            for(String x:returnedValues){
+                for (int i = 0; i < operationsIO.size(); i++) {
+                    if (operationsIO.get(i).getMnemonics().equals(operation)) {
+                        String[] returnedValues = operationsIO.get(i).doOperationIO();
+                        if (returnedValues != null) {
+                            for (String x : returnedValues) {
                                 values.add(x);
 //                                System.out.println("L "+x);
                             }

@@ -11,14 +11,14 @@ import java.util.List;
  * Time: 12:31 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Remove implements OperationsInterface{
+public class Remove implements OperationsInterface {
     @Override
     public String getOperation() {
         return "remove";
     }
 
     @Override
-    public Object doOperation(List<Student> studentList,List<String> values) {
+    public Object doOperation(List<Student> studentList, List<String> values) {
 //        return add(values);
         return null;
     }

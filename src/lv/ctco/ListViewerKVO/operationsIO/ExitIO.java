@@ -27,11 +27,10 @@ public class ExitIO implements OperationIOinterface {
             try {
                 System.out.println("Are you sure you want exit?");
                 String choice = bf.readLine();
-                if (choice.equalsIgnoreCase("Y")){
+                if (choice.equalsIgnoreCase("Y")) {
                     exit[0] = "exit";
                     return exit;
-                }
-                else {
+                } else {
                     return null;
                 }
 //                else{

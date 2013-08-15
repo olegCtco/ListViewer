@@ -11,14 +11,14 @@ import java.util.List;
  * Time: 12:30 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Sort implements OperationsInterface{
+public class Sort implements OperationsInterface {
     @Override
     public String getOperation() {
         return "sort";
     }
 
     @Override
-    public Object doOperation(List<Student> studentList,List<String> values) {
+    public Object doOperation(List<Student> studentList, List<String> values) {
 //        return add(values);
         return null;
     }

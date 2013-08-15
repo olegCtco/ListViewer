@@ -12,7 +12,7 @@ import java.util.List;
  * Time: 12:30 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Find implements OperationsInterface{
+public class Find implements OperationsInterface {
 
     @Override
     public String getOperation() {
@@ -20,13 +20,13 @@ public class Find implements OperationsInterface{
     }
 
     @Override
-    public Object doOperation(List<Student> studentList,List<String> values) {
+    public Object doOperation(List<Student> studentList, List<String> values) {
 //        String name=values.get(0);
 //        String surname=values.get(1);
 //        String university=values.get(2);
-        List<Student> result=new ArrayList<Student>();
-        for(Student student:studentList){
-            for(String nameSurnameUniversity:values){
+        List<Student> result = new ArrayList<Student>();
+        for (Student student : studentList) {
+            for (String nameSurnameUniversity : values) {
 //                if(nameSurnameUniversity.equals(student.))
             }
         }

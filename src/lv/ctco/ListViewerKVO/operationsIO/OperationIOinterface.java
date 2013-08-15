@@ -11,7 +11,9 @@ import java.io.InputStreamReader;
  * To change this template use File | Settings | File Templates.
  */
 public interface OperationIOinterface {
-    BufferedReader bf=new BufferedReader(new InputStreamReader(System.in));
+    BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+
     String[] doOperationIO();
-    String getMnemonics() ;
+
+    String getMnemonics();
 }
