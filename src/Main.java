@@ -10,10 +10,12 @@ import lv.ctco.ListViewerKVO.ListViewerFactory;
 public class Main {
     public static void main(String[] args) {
         ListViewerFactory.factoryInitListViewer().start();
-//        String x="";
+        String x="";
+        x="äsd";
 //        switch (x) {
 //        case "1":
 //        System.out.println("Fuck the other minds");
 //        }
+
     }
 }
