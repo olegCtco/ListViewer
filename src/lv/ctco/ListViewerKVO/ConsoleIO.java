@@ -25,7 +25,7 @@ public class ConsoleIO {
     public ConsoleIO() {
         inputStreamReader = new InputStreamReader(System.in);
         bf = new BufferedReader(inputStreamReader);
-        operationsIO = Arrays.asList((OperationIOinterface) new AddIO("add"), (OperationIOinterface) new ExitIO("exit"), (OperationIOinterface) new RemoveIO(), (OperationIOinterface) new FindIO());
+        operationsIO = Arrays.asList((OperationIOinterface) new AddIO("add"), (OperationIOinterface) new ExitIO("exit"), (OperationIOinterface) new RemoveIO(), (OperationIOinterface) new FindIO(),(OperationIOinterface) new SortIO("sort"));
 
     }
 

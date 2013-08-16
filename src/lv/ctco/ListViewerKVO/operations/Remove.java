@@ -2,7 +2,9 @@ package lv.ctco.ListViewerKVO.operations;
 
 import lv.ctco.ListViewerKVO.Checker;
 import lv.ctco.ListViewerKVO.Student;
+import lv.ctco.ListViewerKVO.StudentList;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,7 +27,8 @@ public class Remove implements OperationsInterface {
     }
 
     @Override
-    public Object doOperation(List<Student> studentList, List<String> values) {
+    public Object doOperation(List<String> values) {
+        List<Student> studentList= StudentList.getStudentList();
         int indexDelete = Integer.parseInt(values.get(1)) - 1;
         if (!checker.outOfBound(studentList, indexDelete)) {
             studentList.remove(indexDelete);

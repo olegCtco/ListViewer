@@ -1,6 +1,8 @@
 package lv.ctco.ListViewerKVO.operations;
 
 import lv.ctco.ListViewerKVO.Student;
+import lv.ctco.ListViewerKVO.StudentList;
+import lv.ctco.ListViewerKVO.operationsIO.ViewIO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,21 +22,40 @@ public class Find implements OperationsInterface {
     }
 
     @Override
-    public List<Student> doOperation(List<Student> studentList, List<String> values) {
-        String name = values.get(0);
-        String surname = values.get(1);
-        String university = values.get(2);
+    public List<Student> doOperation(List<String> values) {
+        String name = values.get(1);
+        String surname = values.get(2);
+        String university = values.get(3);
         List<Student> result = new ArrayList<Student>();
-        for (Student student : studentList) {
-            if (!(name == null & surname == null & university == null) && (name == null && student.getName().equals(name)) & (surname == null && student.getSurname().equals(surname)) & (university == null && student.equals(university))) {
-                result.add(student);
-                break;
+
+        if ((name.equals("") && surname.equals("") && university.equals(""))) {
+            return StudentList.getStudentList();
+        } else {
+            for (Student student : StudentList.getStudentList()) {
+                if (student.getName().equals(name) && student.getSurname().equals(surname) && student.getUniversity().equals(university)) {
+                    result.add(student);
+                }
+                if (name.equals("") && student.getSurname().equals(surname) && student.getUniversity().equals(university)) {
+                    result.add(student);
+                }
+                if (student.getName().equals(name) && surname.equals("") && student.getUniversity().equals(university)) {
+                    result.add(student);
+                }
+                if (student.getName().equals(name) && student.getSurname().equals(surname) && university.equals("")) {
+                    result.add(student);
+                }
+                if (name.equals("") && surname.equals("") && student.getUniversity().equals(university)) {
+                    result.add(student);
+                }
+                if (student.getName().equals(name) && surname.equals("") && university.equals("")) {
+                    result.add(student);
+                }
+                if (name.equals("") && student.getSurname().equals(surname) && university.equals("")) {
+                    result.add(student);
+                }
             }
-//            if (name)
-//            for (String nameSurnameUniversity : values) {
-//                if(nameSurnameUniversity.equals(student.))
-//            }
         }
+        new ViewIO().doOperationIO(result);
         return result;
     }
 }

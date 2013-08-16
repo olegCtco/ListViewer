@@ -1,4 +1,4 @@
-import lv.ctco.ListViewerKVO.ListViewerFactory;
+import lv.ctco.ListViewerKVO.ListViewer;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,13 +9,6 @@ import lv.ctco.ListViewerKVO.ListViewerFactory;
  */
 public class Main {
     public static void main(String[] args) {
-        ListViewerFactory.factoryInitListViewer().start();
-        String x="";
-        x="äsd";
-//        switch (x) {
-//        case "1":
-//        System.out.println("Fuck the other minds");
-//        }
-
+        new ListViewer().start();
     }
 }

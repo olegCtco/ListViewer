@@ -14,5 +14,5 @@ import java.util.List;
 public interface OperationsInterface {
     public String getOperation();
 
-    public Object doOperation(List<Student> studentList, List<String> values);
+    public Object doOperation(List<String> values);
 }

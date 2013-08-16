@@ -1,26 +1,22 @@
 package lv.ctco.ListViewerKVO.operations;
 
-import lv.ctco.ListViewerKVO.Student;
-
 import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
  * User: butross
- * Date: 8/14/13
- * Time: 12:30 PM
+ * Date: 8/16/13
+ * Time: 1:55 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Sort implements OperationsInterface {
+public class View implements OperationsInterface {
     @Override
     public String getOperation() {
-        return "sort";
+        return "view";  //To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override
     public Object doOperation(List<String> values) {
-
-        return null;
+        return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
-
 }
