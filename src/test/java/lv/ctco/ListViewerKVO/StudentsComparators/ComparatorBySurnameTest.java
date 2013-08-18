@@ -29,7 +29,7 @@ public class ComparatorBySurnameTest {
     public void testCompareSortBySurnameEqual() {
         Student student1 = new Student("Janis", "Berzins", "RTU");
         Student student2 = new Student("Janis", "Berzins", "RTU");
-        assertTrue(new ComparatorBySurname().compare(student1, student2) == 0);
+        assertEquals(new ComparatorBySurname().compare(student1, student2), 0);
     }
 
     @Test
@@ -50,7 +50,7 @@ public class ComparatorBySurnameTest {
     public void testCompareSortBySurnameNotRequiredByNameEqual() {
         Student student1 = new Student("Janis", "Berzins", "RTU");
         Student student2 = new Student("Janis", "Berzins", "RTU");
-        assertTrue(new ComparatorBySurname().compare(student1, student2) == 0);
+        assertEquals(new ComparatorBySurname().compare(student1, student2), 0);
     }
 
     @Test
@@ -71,7 +71,7 @@ public class ComparatorBySurnameTest {
     public void testCompareSortBySurnameNotRequiredByNameNotRequiredByUniversityEqual() {
         Student student1 = new Student("Janis", "Berzins", "RTU");
         Student student2 = new Student("Janis", "Berzins", "RTU");
-        assertTrue(new ComparatorBySurname().compare(student1, student2) == 0);
+        assertEquals(new ComparatorBySurname().compare(student1, student2), 0);
     }
 
     @Test

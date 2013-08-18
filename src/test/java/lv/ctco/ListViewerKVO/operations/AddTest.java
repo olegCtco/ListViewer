@@ -28,6 +28,7 @@ public class AddTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
+        studentList.clear();
         studentList.add(new Student(name, surname, university));
         assertEquals(new Add().doOperation(stringList), studentList);
     }
@@ -45,6 +46,7 @@ public class AddTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university1);
+        studentList.clear();
         studentList.add(new Student(name, surname, university2));
         List<Student> studentList1 = (List<Student>) new Add().doOperation(stringList);
         assertFalse(studentList1.equals(studentList));
