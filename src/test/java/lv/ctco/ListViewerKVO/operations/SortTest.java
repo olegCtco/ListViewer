@@ -19,7 +19,9 @@ public class SortTest {
     @Test
     public void testDoOperationByName() {
         String operation = Operation.SORT.name();
-        String sortBy = "name";
+        String name = "Y";
+        String surname = "";
+        String university = "";
         String name1 = "Juris";
         String name2 = "Janis";
         String surname1 = "Berzins";
@@ -29,17 +31,21 @@ public class SortTest {
         List<String> stringList = new ArrayList<>();
         List<Student> studentList = StudentsList.getStudentList();
         stringList.add(operation);
-        stringList.add(sortBy);
+        stringList.add(name);
+        stringList.add(surname);
+        stringList.add(university);
         studentList.clear();
         studentList.add(new Student(name1, surname1, university1));
         studentList.add(new Student(name2, surname2, university2));
-        assertEquals(((List<Student>) new Sort().doOperation(stringList)).get(0).getName(), name2);
+        assertEquals(new Sort().doOperation(stringList).get(0).getName(), name2);
     }
 
     @Test
     public void testDoOperationBySurname() {
         String operation = Operation.SORT.name();
-        String sortBy = "surname";
+        String name = "";
+        String surname = "Y";
+        String university = "";
         String name1 = "Janis";
         String name2 = "Juris";
         String surname1 = "Kalnins";
@@ -49,17 +55,21 @@ public class SortTest {
         List<String> stringList = new ArrayList<>();
         List<Student> studentList = StudentsList.getStudentList();
         stringList.add(operation);
-        stringList.add(sortBy);
+        stringList.add(name);
+        stringList.add(surname);
+        stringList.add(university);
         studentList.clear();
         studentList.add(new Student(name1, surname1, university1));
         studentList.add(new Student(name2, surname2, university2));
-        assertEquals(((List<Student>) new Sort().doOperation(stringList)).get(0).getSurname(), surname2);
+        assertEquals(new Sort().doOperation(stringList).get(0).getSurname(), surname2);
     }
 
     @Test
     public void testDoOperationByUniversity() {
         String operation = Operation.SORT.name();
-        String sortBy = "university";
+        String name = "";
+        String surname = "";
+        String university = "Y";
         String name1 = "Janis";
         String name2 = "Juris";
         String surname1 = "Berzins";
@@ -69,10 +79,12 @@ public class SortTest {
         List<String> stringList = new ArrayList<>();
         List<Student> studentList = StudentsList.getStudentList();
         stringList.add(operation);
-        stringList.add(sortBy);
+        stringList.add(name);
+        stringList.add(surname);
+        stringList.add(university);
         studentList.clear();
         studentList.add(new Student(name1, surname1, university1));
         studentList.add(new Student(name2, surname2, university2));
-        assertEquals(((List<Student>) new Sort().doOperation(stringList)).get(0).getUniversity(), university2);
+        assertEquals(new Sort().doOperation(stringList).get(0).getUniversity(), university2);
     }
 }
