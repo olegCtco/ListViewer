@@ -48,6 +48,25 @@ public class FindTest {
     }
 
     @Test
+    public void testDoOperationNameEmptySurnameExistUniversityExistFindTwo() {
+        String operation = Operation.FIND.name();
+        String name1 = "";
+        String name2 = "Janis";
+        String name3 = "Juris";
+        String surname = "Berzins";
+        String university = "RTU";
+        List<String> stringList = new ArrayList<>();
+        List<Student> studentList = StudentsList.getStudentList();
+        stringList.add(operation);
+        stringList.add(name1);
+        stringList.add(surname);
+        stringList.add(university);
+        studentList.add(new Student(name2, surname, university));
+        studentList.add(new Student(name3, surname, university));
+        assertEquals(new Find().doOperation(stringList), studentList);
+    }
+
+    @Test
     public void testDoOperationNameExistSurnameEmptyUniversityExist() {
         String operation = Operation.FIND.name();
         String name = "Janis";

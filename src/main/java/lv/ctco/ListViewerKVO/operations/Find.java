@@ -26,31 +26,31 @@ public class Find implements Operations {
             for (Student student : StudentsList.getStudentList()) {
                 if (name.equals("") && student.getSurname().equals(surname) && student.getUniversity().equals(university)) {
                     result.add(student);
-                    break;
+                    continue;
                 }
                 if (student.getName().equals(name) && surname.equals("") && student.getUniversity().equals(university)) {
                     result.add(student);
-                    break;
+                    continue;
                 }
                 if (student.getName().equals(name) && student.getSurname().equals(surname) && university.equals("")) {
                     result.add(student);
-                    break;
+                    continue;
                 }
                 if (name.equals("") && surname.equals("") && student.getUniversity().equals(university)) {
                     result.add(student);
-                    break;
+                    continue;
                 }
                 if (student.getName().equals(name) && surname.equals("") && university.equals("")) {
                     result.add(student);
-                    break;
+                    continue;
                 }
                 if (name.equals("") && student.getSurname().equals(surname) && university.equals("")) {
                     result.add(student);
-                    break;
+                    continue;
                 }
                 if (student.getName().equals(name) && student.getSurname().equals(surname) && student.getUniversity().equals(university)) {
                     result.add(student);
-                    break;
+                    continue;
                 }
             }
         new ViewIO().doOperationIO(result);
