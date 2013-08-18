@@ -1,6 +1,5 @@
 package lv.ctco.ListViewerKVO.operationsIO;
 
-import lv.ctco.ListViewerKVO.Operation;
 import org.junit.Test;
 
 import java.io.BufferedReader;
@@ -18,11 +17,13 @@ public class AddIOTest {
         String name = "Janis";
         String surname = "Berzins";
         String university = "RTU";
+        AddIO addIO = new AddIO("Add");
+        addIO.localBf = mock(BufferedReader.class);
         try {
-            when(mock(BufferedReader.class).readLine()).thenReturn(name).thenReturn(surname).thenReturn(university).getMock();
+            when(addIO.localBf.readLine()).thenReturn(name).thenReturn(surname).thenReturn(university);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        assertTrue(Arrays.equals(new AddIO(Operation.ADD.name()).doOperationIO(), new String[]{name, surname, university, ""}));
+        assertTrue(Arrays.equals(addIO.doOperationIO(), new String[]{name, surname, university, null}));
     }
 }

@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 
 public class FindIO implements OperationsIO {
     BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    BufferedReader localBf;
 
     @Override
     public String[] doOperationIO() {
@@ -18,13 +19,13 @@ public class FindIO implements OperationsIO {
         String[] values = new String[3];
         try {
             System.out.println("Input name:");
-            name = bf.readLine();
+            name = localBf.readLine();
             values[0] = name;
             System.out.println("Input surname:");
-            surname = bf.readLine();
+            surname = localBf.readLine();
             values[1] = surname;
             System.out.println("Input university");
-            university = bf.readLine();
+            university = localBf.readLine();
             values[2] = university;
         } catch (IOException e) {
         }

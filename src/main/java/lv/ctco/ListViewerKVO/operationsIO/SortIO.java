@@ -2,9 +2,11 @@ package lv.ctco.ListViewerKVO.operationsIO;
 
 import lv.ctco.ListViewerKVO.OperationsIO;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 
 public class SortIO implements OperationsIO {
+    BufferedReader localBf;
     private String mnemonics;
 
     public SortIO(String mnemonics) {
@@ -23,7 +25,7 @@ public class SortIO implements OperationsIO {
         String[] values = new String[4];
         try {
             System.out.println("Are you want to sort by name? (Y if yes)");
-            name = bf.readLine();
+            name = localBf.readLine();
             values[0] = name;
             if (name.equalsIgnoreCase("Y")) {
                 values[1] = surname;
@@ -31,14 +33,14 @@ public class SortIO implements OperationsIO {
                 return values;
             }
             System.out.println("Are you want to sort by surname? (Y if yes)");
-            surname = bf.readLine();
+            surname = localBf.readLine();
             values[1] = surname;
             if (surname.equalsIgnoreCase("Y")) {
                 values[2] = university;
                 return values;
             }
             System.out.println("Are you want to sort by university? (Y if yes)");
-            university = bf.readLine();
+            university = localBf.readLine();
             values[2] = university;
         } catch (IOException e) {
         }

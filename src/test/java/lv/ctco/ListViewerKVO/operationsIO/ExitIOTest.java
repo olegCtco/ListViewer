@@ -15,22 +15,26 @@ public class ExitIOTest {
     @Test
     public void testDoOperationIOYes() {
         String yesOrAny = "Y";
+        ExitIO exitIO=new ExitIO("exit");
+        exitIO.localBf = mock(BufferedReader.class);
         try {
-            when(mock(BufferedReader.class).readLine()).thenReturn(yesOrAny).getMock();
+            when(exitIO.localBf.readLine()).thenReturn(yesOrAny);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        assertTrue(Arrays.equals(new ExitIO(Operation.EXIT.name()).doOperationIO(), new String[]{Operation.EXIT.name()}));
+        assertTrue(Arrays.equals(exitIO.doOperationIO(), new String[]{Operation.EXIT.name()}));
     }
 
     @Test
     public void testDoOperationIONo() {
         String yesOrAny = "N";
+        ExitIO exitIO=new ExitIO("exit");
+        exitIO.localBf = mock(BufferedReader.class);
         try {
-            when(mock(BufferedReader.class).readLine()).thenReturn(yesOrAny).getMock();
+            when(exitIO.localBf.readLine()).thenReturn(yesOrAny);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        assertTrue(Arrays.equals(new ExitIO(Operation.EXIT.name()).doOperationIO(), null));
+        assertTrue(Arrays.equals(exitIO.doOperationIO(), null));
     }
 }

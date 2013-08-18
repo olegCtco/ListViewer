@@ -3,13 +3,16 @@ package lv.ctco.ListViewerKVO.operationsIO;
 import lv.ctco.ListViewerKVO.Operation;
 import lv.ctco.ListViewerKVO.OperationsIO;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 
 public class ExitIO implements OperationsIO {
     private String mnemonics;
+    BufferedReader localBf;
 
     public ExitIO(String mnemonics) {
         this.mnemonics = mnemonics;
+        localBf=bf;
     }
 
     public String getMnemonics() {
@@ -21,7 +24,7 @@ public class ExitIO implements OperationsIO {
         String[] exit = new String[1];
         while (true) try {
             System.out.println("Are you sure you want exit?('Y' if yes)");
-            String choice = bf.readLine();
+            String choice = localBf.readLine();
             if (choice.equalsIgnoreCase("Y")) {
                 exit[0] = Operation.EXIT.name();
                 return exit;
