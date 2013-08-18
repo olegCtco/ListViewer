@@ -34,7 +34,6 @@ public class AddIO implements OperationIOInterface {
                 System.out.println("Input surname:");
                 surname = bf.readLine();
             } while (checker.checkIfEmptyString(surname));
-
             values[1] = surname;
             do {
                 System.out.println("Input university");
