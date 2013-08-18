@@ -5,11 +5,17 @@ import lv.ctco.ListViewerKVO.OperationsIO;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class FindIO implements OperationsIO {
-    BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
     BufferedReader localBf;
+    //    BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+    private String mnemonics;
+
+
+    public FindIO(String mnemonics) {
+        this.localBf = bf;
+        this.mnemonics = mnemonics;
+    }
 
     @Override
     public String[] doOperationIO() {
@@ -34,6 +40,6 @@ public class FindIO implements OperationsIO {
 
     @Override
     public String getMnemonics() {
-        return Operation.FIND.name();
+        return mnemonics;
     }
 }

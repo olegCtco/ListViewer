@@ -16,16 +16,13 @@ public class RemoveIOTest {
     @Test
     public void testDoOperationIO() {
         String index = "1";
+        RemoveIO removeIO = new RemoveIO("Remove");
+        removeIO.localBf = mock(BufferedReader.class);
         try {
-            when(mock(BufferedReader.class).readLine()).thenReturn(index).getMock();
+            when(removeIO.localBf.readLine()).thenReturn(index);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        assertTrue(Arrays.equals(new ExitIO(Operation.EXIT.name()).doOperationIO(), new String[]{index}));
-    }
-
-    @Test
-    public void testGetMnemonics() {
-        assertEquals(new RemoveIO().getMnemonics(), Operation.REMOVE.name());
+        assertTrue(Arrays.equals(removeIO.doOperationIO(), new String[]{index}));
     }
 }
