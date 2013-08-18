@@ -1,6 +1,5 @@
 package lv.ctco.ListViewerKVO.operationsIO;
 
-import lv.ctco.ListViewerKVO.Operation;
 import lv.ctco.ListViewerKVO.OperationsIO;
 
 import java.io.BufferedReader;
@@ -8,7 +7,6 @@ import java.io.IOException;
 
 public class FindIO implements OperationsIO {
     BufferedReader localBf;
-    //    BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
     private String mnemonics;
 
 
