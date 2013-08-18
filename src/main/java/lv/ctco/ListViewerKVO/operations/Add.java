@@ -1,13 +1,13 @@
 package lv.ctco.ListViewerKVO.operations;
 
 import lv.ctco.ListViewerKVO.Operation;
-import lv.ctco.ListViewerKVO.OperationsInterface;
+import lv.ctco.ListViewerKVO.Operations;
 import lv.ctco.ListViewerKVO.Student;
 import lv.ctco.ListViewerKVO.StudentList;
 
 import java.util.List;
 
-public class Add implements OperationsInterface {
+public class Add implements Operations {
     @Override
     public String getOperation() {
         return Operation.ADD.name();

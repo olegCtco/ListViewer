@@ -3,7 +3,7 @@ package lv.ctco.ListViewerKVO;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public interface OperationIOInterface {
+public interface OperationIO {
     BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
     String[] doOperationIO();

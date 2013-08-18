@@ -1,11 +1,11 @@
 package lv.ctco.ListViewerKVO.operations;
 
 import lv.ctco.ListViewerKVO.Operation;
-import lv.ctco.ListViewerKVO.OperationsInterface;
+import lv.ctco.ListViewerKVO.Operations;
 
 import java.util.List;
 
-public class Exit implements OperationsInterface {
+public class Exit implements Operations {
     @Override
     public String getOperation() {
         return Operation.EXIT.name();

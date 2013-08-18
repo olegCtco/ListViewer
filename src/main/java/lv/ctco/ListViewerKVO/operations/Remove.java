@@ -4,7 +4,7 @@ import lv.ctco.ListViewerKVO.*;
 
 import java.util.List;
 
-public class Remove implements OperationsInterface {
+public class Remove implements Operations {
     Checker checker;
 
     public Remove() {

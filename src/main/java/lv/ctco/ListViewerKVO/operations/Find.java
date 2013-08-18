@@ -1,7 +1,7 @@
 package lv.ctco.ListViewerKVO.operations;
 
 import lv.ctco.ListViewerKVO.Operation;
-import lv.ctco.ListViewerKVO.OperationsInterface;
+import lv.ctco.ListViewerKVO.Operations;
 import lv.ctco.ListViewerKVO.Student;
 import lv.ctco.ListViewerKVO.StudentList;
 import lv.ctco.ListViewerKVO.operationsIO.ViewIO;
@@ -9,7 +9,7 @@ import lv.ctco.ListViewerKVO.operationsIO.ViewIO;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Find implements OperationsInterface {
+public class Find implements Operations {
     @Override
     public String getOperation() {
         return Operation.FIND.name();

@@ -1,11 +1,11 @@
 package lv.ctco.ListViewerKVO.operationsIO;
 
 import lv.ctco.ListViewerKVO.Operation;
-import lv.ctco.ListViewerKVO.OperationIOInterface;
+import lv.ctco.ListViewerKVO.OperationIO;
 
 import java.io.IOException;
 
-public class ExitIO implements OperationIOInterface {
+public class ExitIO implements OperationIO {
     private String mnemonics;
 
     public ExitIO(String mnemonics) {
