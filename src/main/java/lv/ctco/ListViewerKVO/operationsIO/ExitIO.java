@@ -1,5 +1,6 @@
 package lv.ctco.ListViewerKVO.operationsIO;
 
+import lv.ctco.ListViewerKVO.Operation;
 import lv.ctco.ListViewerKVO.OperationIOInterface;
 
 import java.io.IOException;
@@ -22,7 +23,7 @@ public class ExitIO implements OperationIOInterface {
             System.out.println("Are you sure you want exit?('Y' if yes)");
             String choice = bf.readLine();
             if (choice.equalsIgnoreCase("Y")) {
-                exit[0] = "exit";
+                exit[0] = Operation.EXIT.name();
                 return exit;
             } else return null;
         } catch (IOException e) {
