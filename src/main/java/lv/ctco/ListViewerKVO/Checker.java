@@ -2,7 +2,7 @@ package lv.ctco.ListViewerKVO;
 
 import java.util.List;
 
-public class Checker implements ListOfOperations {
+public class Checker implements OperationsList {
     public boolean checkOperation(String operation) {
         for (int i = 0; i < listOfOperations.size(); i++)
             if (listOfOperations.get(i).getOperation().equalsIgnoreCase(operation)) return true;

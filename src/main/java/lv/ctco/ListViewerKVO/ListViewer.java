@@ -5,7 +5,7 @@ import lv.ctco.ListViewerKVO.operationsIO.ViewIO;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListViewer implements ListOfOperations {
+public class ListViewer implements OperationsList {
     private List<Student> resultList;
     private ConsoleIO consoleIO;
     private List<String> values;
