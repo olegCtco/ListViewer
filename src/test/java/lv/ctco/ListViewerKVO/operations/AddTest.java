@@ -18,19 +18,32 @@ public class AddTest {
 
     @Test
     public void testDoOperationEquals() {
+        String name = "Janis";
+        String surname = "Berzins";
+        String university = "RTU";
         List<String> stringList = new ArrayList<>();
         List<Student> studentList = new ArrayList<>();
-        for (int i = 0; i <= 3; i++) stringList.add("" + i);
-        studentList.add(new Student("1", "2", "3"));
-        assertEquals((List<Student>) new Add().doOperation(stringList), studentList);
+        stringList.add(Operation.ADD.name());
+        stringList.add(name);
+        stringList.add(surname);
+        stringList.add(university);
+        studentList.add(new Student(name, surname, university));
+        assertEquals(new Add().doOperation(stringList), studentList);
     }
 
     @Test
     public void testDoOperationFalse() {
+        String name = "Janis";
+        String surname = "Berzins";
+        String university1 = "RTU";
+        String university2 = "LU";
         List<String> stringList = new ArrayList<>();
         List<Student> studentList = new ArrayList<>();
-        for (int i = 0; i <= 3; i++) stringList.add("" + i);
-        studentList.add(new Student("1", "2", "0"));
+        stringList.add(Operation.ADD.name());
+        stringList.add(name);
+        stringList.add(surname);
+        stringList.add(university1);
+        studentList.add(new Student(name, surname, university2));
         List<Student> studentList1 = (List<Student>) new Add().doOperation(stringList);
         assertFalse(studentList1.equals(studentList));
     }

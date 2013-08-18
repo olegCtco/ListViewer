@@ -19,7 +19,22 @@ public class FindTest {
     public void testDoOperationNameEmptySurnameEmptyUniversityEmpty() {
         List<String> stringList = new ArrayList<>();
         List<Student> studentList = new ArrayList<>();
-        for (int i = 0; i <= 3; i++) stringList.add("");
+        stringList.add(Operation.FIND.name());
+        stringList.add("");
+        stringList.add("");
+        stringList.add("");
+        assertEquals(new Find().doOperation(stringList), studentList);
+    }
+
+    @Test
+    public void testDoOperationNameEmptySurnameExistUniversityExist() {
+        List<String> stringList = new ArrayList<>();
+        List<Student> studentList = new ArrayList<>();
+        stringList.add(Operation.FIND.name());
+        stringList.add("");
+        stringList.add("Berzins");
+        stringList.add("RTU");
+        studentList.add(new Student("Janis", "Berzins", "RTU"));
         assertEquals(new Find().doOperation(stringList), studentList);
     }
 }
