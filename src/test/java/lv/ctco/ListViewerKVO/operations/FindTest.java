@@ -62,4 +62,84 @@ public class FindTest {
         studentList.add(new Student(name, surname, university));
         assertEquals(new Find().doOperation(stringList), studentList);
     }
+
+    @Test
+    public void testDoOperationNameExistSurnameExistUniversityEmpty() {
+        String operation = Operation.FIND.name();
+        String name = "Janis";
+        String surname = "Berzins";
+        String university = "";
+        List<String> stringList = new ArrayList<>();
+        List<Student> studentList = StudentsList.getStudentList();
+        stringList.add(operation);
+        stringList.add(name);
+        stringList.add(surname);
+        stringList.add(university);
+        studentList.add(new Student(name, surname, university));
+        assertEquals(new Find().doOperation(stringList), studentList);
+    }
+
+    @Test
+    public void testDoOperationNameEmptySurnameEmptyUniversityExist() {
+        String operation = Operation.FIND.name();
+        String name = "";
+        String surname = "";
+        String university = "RTU";
+        List<String> stringList = new ArrayList<>();
+        List<Student> studentList = StudentsList.getStudentList();
+        stringList.add(operation);
+        stringList.add(name);
+        stringList.add(surname);
+        stringList.add(university);
+        studentList.add(new Student(name, surname, university));
+        assertEquals(new Find().doOperation(stringList), studentList);
+    }
+
+    @Test
+    public void testDoOperationNameExistSurnameEmptyUniversityEmpty() {
+        String operation = Operation.FIND.name();
+        String name = "Janis";
+        String surname = "";
+        String university = "";
+        List<String> stringList = new ArrayList<>();
+        List<Student> studentList = StudentsList.getStudentList();
+        stringList.add(operation);
+        stringList.add(name);
+        stringList.add(surname);
+        stringList.add(university);
+        studentList.add(new Student(name, surname, university));
+        assertEquals(new Find().doOperation(stringList), studentList);
+    }
+
+    @Test
+    public void testDoOperationNameEmptySurnameExistUniversityEmpty() {
+        String operation = Operation.FIND.name();
+        String name = "";
+        String surname = "Berzins";
+        String university = "";
+        List<String> stringList = new ArrayList<>();
+        List<Student> studentList = StudentsList.getStudentList();
+        stringList.add(operation);
+        stringList.add(name);
+        stringList.add(surname);
+        stringList.add(university);
+        studentList.add(new Student(name, surname, university));
+        assertEquals(new Find().doOperation(stringList), studentList);
+    }
+
+    @Test
+    public void testDoOperationNameExistSurnameExistUniversityExist() {
+        String operation = Operation.FIND.name();
+        String name = "Janis";
+        String surname = "Berzins";
+        String university = "RTU";
+        List<String> stringList = new ArrayList<>();
+        List<Student> studentList = StudentsList.getStudentList();
+        stringList.add(operation);
+        stringList.add(name);
+        stringList.add(surname);
+        stringList.add(university);
+        studentList.add(new Student(name, surname, university));
+        assertEquals(new Find().doOperation(stringList), studentList);
+    }
 }
