@@ -18,7 +18,7 @@ public class Remove implements Operations {
 
     @Override
     public Object doOperation(List<String> values) {
-        List<Student> studentList = StudentList.getStudentList();
+        List<Student> studentList = StudentsList.getStudentList();
         int indexDelete = Integer.parseInt(values.get(1)) - 1;
         if (!checker.outOfBound(studentList, indexDelete)) studentList.remove(indexDelete);
         return studentList;

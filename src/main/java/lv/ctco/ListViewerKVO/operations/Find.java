@@ -3,7 +3,7 @@ package lv.ctco.ListViewerKVO.operations;
 import lv.ctco.ListViewerKVO.Operation;
 import lv.ctco.ListViewerKVO.Operations;
 import lv.ctco.ListViewerKVO.Student;
-import lv.ctco.ListViewerKVO.StudentList;
+import lv.ctco.ListViewerKVO.StudentsList;
 import lv.ctco.ListViewerKVO.operationsIO.ViewIO;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class Find implements Operations {
         List<Student> result = new ArrayList<>();
         if ((name.equals("") && surname.equals("") && university.equals(""))) return result;
         else
-            for (Student student : StudentList.getStudentList()) {
+            for (Student student : StudentsList.getStudentList()) {
                 if (name.equals("") && student.getSurname().equals(surname) && student.getUniversity().equals(university))
                     result.add(student);
                 if (student.getName().equals(name) && surname.equals("") && student.getUniversity().equals(university))

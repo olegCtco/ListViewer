@@ -2,6 +2,7 @@ package lv.ctco.ListViewerKVO.operations;
 
 import lv.ctco.ListViewerKVO.Operation;
 import lv.ctco.ListViewerKVO.Student;
+import lv.ctco.ListViewerKVO.StudentsList;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -30,19 +31,19 @@ public class FindTest {
         assertEquals(new Find().doOperation(stringList), studentList);
     }
 
-//    @Test
-//    public void testDoOperationNameEmptySurnameExistUniversityExist() {
-//        String operation = Operation.FIND.name();
-//        String name = "";
-//        String surname = "Berzins";
-//        String university = "RTU";
-//        List<String> stringList = new ArrayList<>();
-//        List<Student> studentList = StudentList.getStudentList();
-//        stringList.add(operation);
-//        stringList.add(name);
-//        stringList.add(surname);
-//        stringList.add(university);
-//        studentList.add(new Student(name, surname, university));
-//        assertEquals(new Find().doOperation(stringList), studentList);
-//    }
+    @Test
+    public void testDoOperationNameEmptySurnameExistUniversityExist() {
+        String operation = Operation.FIND.name();
+        String name = "";
+        String surname = "Berzins";
+        String university = "RTU";
+        List<String> stringList = new ArrayList<>();
+        List<Student> studentList = StudentsList.getStudentList();
+        stringList.add(operation);
+        stringList.add(name);
+        stringList.add(surname);
+        stringList.add(university);
+        studentList.add(new Student(name, surname, university));
+        assertEquals(new Find().doOperation(stringList), studentList);
+    }
 }
