@@ -17,7 +17,7 @@ public class SortIO implements OperationsIO {
 
     @Override
     public String[] doOperationIO() {
-        String name = "";
+        String name;
         String surname = "";
         String university = "";
         String[] values = new String[4];
