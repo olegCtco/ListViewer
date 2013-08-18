@@ -14,7 +14,7 @@ public class AddIO implements OperationsIO {
     public AddIO(String mnemonics) {
         this.mnemonics = mnemonics;
         checker = new Checker();
-        localBf=bf;
+        localBf = bf;
     }
 
     public String getMnemonics() {

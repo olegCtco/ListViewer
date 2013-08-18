@@ -10,12 +10,9 @@ import java.io.IOException;
 public class RemoveIO implements OperationsIO {
     Checker checker;
     BufferedReader localBf;
-    private String mnemonics;
 
-    public RemoveIO(String mnemonics) {
+    public RemoveIO() {
         checker = new Checker();
-        localBf=bf;
-        this.mnemonics=mnemonics;
     }
 
     @Override
@@ -25,7 +22,7 @@ public class RemoveIO implements OperationsIO {
         try {
             while (true) {
                 deleteItemIndex[0] = localBf.readLine();
-                if (checker.notANumber(deleteItemIndex[0])) {
+                if (checker.notAnInteger(deleteItemIndex[0])) {
                     System.out.println("Input correct number");
                     deleteItemIndex[0] = "-1";
                 } else break;
@@ -38,6 +35,6 @@ public class RemoveIO implements OperationsIO {
 
     @Override
     public String getMnemonics() {
-        return mnemonics;
+        return Operation.REMOVE.name();
     }
 }

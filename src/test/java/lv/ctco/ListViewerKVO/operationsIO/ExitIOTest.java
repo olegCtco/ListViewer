@@ -15,7 +15,7 @@ public class ExitIOTest {
     @Test
     public void testDoOperationIOYes() {
         String yesOrAny = "Y";
-        ExitIO exitIO=new ExitIO("exit");
+        ExitIO exitIO = new ExitIO("exit");
         exitIO.localBf = mock(BufferedReader.class);
         try {
             when(exitIO.localBf.readLine()).thenReturn(yesOrAny);
@@ -28,7 +28,7 @@ public class ExitIOTest {
     @Test
     public void testDoOperationIONo() {
         String yesOrAny = "N";
-        ExitIO exitIO=new ExitIO("exit");
+        ExitIO exitIO = new ExitIO("exit");
         exitIO.localBf = mock(BufferedReader.class);
         try {
             when(exitIO.localBf.readLine()).thenReturn(yesOrAny);

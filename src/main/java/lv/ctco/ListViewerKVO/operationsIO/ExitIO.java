@@ -12,7 +12,7 @@ public class ExitIO implements OperationsIO {
 
     public ExitIO(String mnemonics) {
         this.mnemonics = mnemonics;
-        localBf=bf;
+        localBf = bf;
     }
 
     public String getMnemonics() {
