@@ -13,7 +13,7 @@ public class ConsoleIO {
     private BufferedReader bf;
     private InputStreamReader inputStreamReader;
     private Checker checker = new Checker();
-    private List<OperationIO> operationsIO;
+    private List<OperationsIO> operationsIO;
 
     public ConsoleIO() {
         inputStreamReader = new InputStreamReader(System.in);

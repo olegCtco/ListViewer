@@ -1,11 +1,11 @@
 package lv.ctco.ListViewerKVO.operationsIO;
 
 import lv.ctco.ListViewerKVO.Checker;
-import lv.ctco.ListViewerKVO.OperationIO;
+import lv.ctco.ListViewerKVO.OperationsIO;
 
 import java.io.IOException;
 
-public class SortIO implements OperationIO {
+public class SortIO implements OperationsIO {
     private Checker checker;
     private String mnemonics;
 

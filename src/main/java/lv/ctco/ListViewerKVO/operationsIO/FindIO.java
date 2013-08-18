@@ -1,13 +1,13 @@
 package lv.ctco.ListViewerKVO.operationsIO;
 
 import lv.ctco.ListViewerKVO.Operation;
-import lv.ctco.ListViewerKVO.OperationIO;
+import lv.ctco.ListViewerKVO.OperationsIO;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class FindIO implements OperationIO {
+public class FindIO implements OperationsIO {
     BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
     @Override
