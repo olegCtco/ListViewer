@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 public class ExitTest {
     @Test
     public void testGetOperation() {
-        assertEquals(new Exit().getOperation(), Operation.EXIT);
+        assertEquals(new Exit().getOperation(), Operation.EXIT.name());
     }
 
     @Test
