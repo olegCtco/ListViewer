@@ -6,7 +6,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class CheckerTest {
-    Checker checker;
+    private static Checker checker;
 
     @Before
     public void setUp() {
