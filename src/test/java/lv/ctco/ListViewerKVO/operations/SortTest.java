@@ -17,6 +17,30 @@ public class SortTest {
     }
 
     @Test
+    public void testDoOperationWithoutAnyComparator() {
+        String operation = Operation.SORT.name();
+        String name = "";
+        String surname = "";
+        String university = "";
+        String name1 = "Juris";
+        String name2 = "Janis";
+        String surname1 = "Berzins";
+        String surname2 = "Kalnins";
+        String university1 = "RTU";
+        String university2 = "LU";
+        List<String> stringList = new ArrayList<>();
+        List<Student> studentList = StudentsList.getStudentList();
+        stringList.add(operation);
+        stringList.add(name);
+        stringList.add(surname);
+        stringList.add(university);
+        studentList.clear();
+        studentList.add(new Student(name1, surname1, university1));
+        studentList.add(new Student(name2, surname2, university2));
+        assertEquals(new Sort().doOperation(stringList), studentList);
+    }
+
+    @Test
     public void testDoOperationByName() {
         String operation = Operation.SORT.name();
         String name = "Y";
