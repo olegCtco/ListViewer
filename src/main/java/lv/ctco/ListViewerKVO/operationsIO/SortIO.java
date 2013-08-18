@@ -11,6 +11,7 @@ public class SortIO implements OperationsIO {
 
     public SortIO(String mnemonics) {
         this.mnemonics = mnemonics;
+        localBf=bf;
     }
 
     public String getMnemonics() {

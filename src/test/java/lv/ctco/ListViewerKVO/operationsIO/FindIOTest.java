@@ -18,22 +18,13 @@ public class FindIOTest {
         String name = "Janis";
         String surname = "Berzins";
         String university = "RTU";
+        FindIO findIO = new FindIO("Find");
+        findIO.localBf = mock(BufferedReader.class);
         try {
-            when(mock(BufferedReader.class).readLine()).thenReturn(name).thenReturn(surname).thenReturn(university).getMock();
+            when(findIO.localBf.readLine()).thenReturn(name).thenReturn(surname).thenReturn(university);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        assertTrue(Arrays.equals(new FindIO().doOperationIO(), new String[]{name, surname, university}));
-        String name = "Janis";
-        String surname = "Berzins";
-        String university = "RTU";
-        FindIO findIO = new FindIO("find");
-        FindIO.localBf = mock(BufferedReader.class);
-        try {
-            when(addIO.localBf.readLine()).thenReturn(name).thenReturn(surname).thenReturn(university);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        assertTrue(Arrays.equals(addIO.doOperationIO(), new String[]{name, surname, university, null}));
+        assertTrue(Arrays.equals(findIO.doOperationIO(), new String[]{name, surname, university}));
     }
 }
