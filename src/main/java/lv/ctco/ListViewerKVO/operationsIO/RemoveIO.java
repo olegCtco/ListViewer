@@ -4,10 +4,12 @@ import lv.ctco.ListViewerKVO.Checker;
 import lv.ctco.ListViewerKVO.Operation;
 import lv.ctco.ListViewerKVO.OperationsIO;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 
 public class RemoveIO implements OperationsIO {
     Checker checker;
+    BufferedReader localBf;
 
     public RemoveIO() {
         checker = new Checker();
@@ -19,7 +21,7 @@ public class RemoveIO implements OperationsIO {
         System.out.println("Input number of element, what you want to delete:");
         try {
             while (true) {
-                deleteItemIndex[0] = bf.readLine();
+                deleteItemIndex[0] = localBf.readLine();
                 if (checker.notANumber(deleteItemIndex[0])) {
                     System.out.println("Input correct number");
                     deleteItemIndex[0] = "-1";

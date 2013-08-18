@@ -24,10 +24,16 @@ public class FindIOTest {
             e.printStackTrace();
         }
         assertTrue(Arrays.equals(new FindIO().doOperationIO(), new String[]{name, surname, university}));
-    }
-
-    @Test
-    public void testGetMnemonics() {
-        assertEquals(new FindIO().getMnemonics(), Operation.FIND.name());
+        String name = "Janis";
+        String surname = "Berzins";
+        String university = "RTU";
+        FindIO findIO = new FindIO("find");
+        FindIO.localBf = mock(BufferedReader.class);
+        try {
+            when(addIO.localBf.readLine()).thenReturn(name).thenReturn(surname).thenReturn(university);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        assertTrue(Arrays.equals(addIO.doOperationIO(), new String[]{name, surname, university, null}));
     }
 }
