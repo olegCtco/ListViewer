@@ -2,6 +2,7 @@ package lv.ctco.ListViewerKVO.operations;
 
 import lv.ctco.ListViewerKVO.Operation;
 import lv.ctco.ListViewerKVO.Student;
+import lv.ctco.ListViewerKVO.StudentsList;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ public class AddTest {
     @Test
     public void testDoOperationEquals() {
         String operation = Operation.ADD.name();
+        StudentsList.getStudentList().clear();
         String name = "Janis";
         String surname = "Berzins";
         String university = "RTU";
@@ -30,7 +32,7 @@ public class AddTest {
         stringList.add(university);
         studentList.clear();
         studentList.add(new Student(name, surname, university));
-        assertEquals(new Add().doOperation(stringList), studentList);
+        assertEquals(studentList,new Add().doOperation(stringList));
     }
 
     @Test

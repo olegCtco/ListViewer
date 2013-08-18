@@ -28,6 +28,7 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
+        studentList.clear();
         assertEquals(new Find().doOperation(stringList), studentList);
     }
 
@@ -154,6 +155,7 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
+        studentList.clear();
         studentList.add(new Student(name, surname, university));
         assertEquals(new Find().doOperation(stringList), studentList);
     }
@@ -231,6 +233,7 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
+        studentList.clear();
         studentList.add(new Student(name, surname, university));
         assertEquals(new Find().doOperation(stringList), studentList);
     }
