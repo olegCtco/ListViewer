@@ -1,5 +1,6 @@
 package lv.ctco.ListViewerKVO;
 
+import lv.ctco.ListViewerKVO.Checker;
 import org.junit.Before;
 import org.junit.Test;
 
