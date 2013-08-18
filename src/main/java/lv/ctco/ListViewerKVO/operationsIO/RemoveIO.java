@@ -1,7 +1,6 @@
 package lv.ctco.ListViewerKVO.operationsIO;
 
 import lv.ctco.ListViewerKVO.Checker;
-import lv.ctco.ListViewerKVO.Operation;
 import lv.ctco.ListViewerKVO.OperationsIO;
 
 import java.io.BufferedReader;
@@ -14,7 +13,7 @@ public class RemoveIO implements OperationsIO {
 
     public RemoveIO(String mnemonics) {
         checker = new Checker();
-        this.mnemonics=mnemonics;
+        this.mnemonics = mnemonics;
     }
 
     @Override
