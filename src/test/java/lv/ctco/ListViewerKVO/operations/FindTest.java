@@ -16,11 +16,10 @@ public class FindTest {
     }
 
     @Test
-    public void testDoOperationNullNullNull() {
+    public void testDoOperationNameEmptySurnameEmptyUniversityEmpty() {
         List<String> stringList = new ArrayList<>();
         List<Student> studentList = new ArrayList<>();
         for (int i = 0; i <= 3; i++) stringList.add("");
-        studentList.add(new Student("", "", ""));
         assertEquals(new Find().doOperation(stringList), studentList);
     }
 }
