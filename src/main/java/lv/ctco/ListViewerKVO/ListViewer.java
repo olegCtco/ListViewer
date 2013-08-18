@@ -21,7 +21,7 @@ public class ListViewer implements ListOfOperations {
             String operation = values.get(0);
             if (operation.equalsIgnoreCase(Operation.VIEW.name())) new ViewIO().doOperationIO(resultList);
             for (int i = 0; i < listOfOperations.size(); i++)
-                if (listOfOperations.get(i).getOperation().equals(operation))
+                if (listOfOperations.get(i).getOperation().equalsIgnoreCase(operation))
                     resultList = (List<Student>) listOfOperations.get(i).doOperation(values);
         }
     }
