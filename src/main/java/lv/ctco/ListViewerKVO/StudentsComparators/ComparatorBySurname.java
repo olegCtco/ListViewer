@@ -1,4 +1,4 @@
-package lv.ctco.ListViewerKVO.StudentsComparators;
+package lv.ctco.ListViewerKVO.studentsComparators;
 
 import lv.ctco.ListViewerKVO.Student;
 

@@ -3,11 +3,11 @@ package lv.ctco.ListViewerKVO.operations;
 import lv.ctco.ListViewerKVO.Operation;
 import lv.ctco.ListViewerKVO.Operations;
 import lv.ctco.ListViewerKVO.Student;
-import lv.ctco.ListViewerKVO.StudentsComparators.ComparatorByName;
-import lv.ctco.ListViewerKVO.StudentsComparators.ComparatorBySurname;
-import lv.ctco.ListViewerKVO.StudentsComparators.ComparatorByUniversity;
 import lv.ctco.ListViewerKVO.StudentsList;
 import lv.ctco.ListViewerKVO.operationsIO.ViewIO;
+import lv.ctco.ListViewerKVO.studentsComparators.ComparatorByName;
+import lv.ctco.ListViewerKVO.studentsComparators.ComparatorBySurname;
+import lv.ctco.ListViewerKVO.studentsComparators.ComparatorByUniversity;
 
 import java.util.Collections;
 import java.util.List;
