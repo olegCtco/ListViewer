@@ -24,19 +24,34 @@ public class Find implements Operations {
         if ((name.equals("") && surname.equals("") && university.equals(""))) return result;
         else
             for (Student student : StudentsList.getStudentList()) {
-                if (name.equals("") && student.getSurname().equals(surname) && student.getUniversity().equals(university))
+                if (name.equals("") && student.getSurname().equals(surname) && student.getUniversity().equals(university)) {
                     result.add(student);
-                if (student.getName().equals(name) && surname.equals("") && student.getUniversity().equals(university))
+                    break;
+                }
+                if (student.getName().equals(name) && surname.equals("") && student.getUniversity().equals(university)) {
                     result.add(student);
-                if (student.getName().equals(name) && student.getSurname().equals(surname) && university.equals(""))
+                    break;
+                }
+                if (student.getName().equals(name) && student.getSurname().equals(surname) && university.equals("")) {
                     result.add(student);
-                if (name.equals("") && surname.equals("") && student.getUniversity().equals(university))
+                    break;
+                }
+                if (name.equals("") && surname.equals("") && student.getUniversity().equals(university)) {
                     result.add(student);
-                if (student.getName().equals(name) && surname.equals("") && university.equals("")) result.add(student);
-                if (name.equals("") && student.getSurname().equals(surname) && university.equals(""))
+                    break;
+                }
+                if (student.getName().equals(name) && surname.equals("") && university.equals("")) {
                     result.add(student);
-                if (student.getName().equals(name) && student.getSurname().equals(surname) && student.getUniversity().equals(university))
+                    break;
+                }
+                if (name.equals("") && student.getSurname().equals(surname) && university.equals("")) {
                     result.add(student);
+                    break;
+                }
+                if (student.getName().equals(name) && student.getSurname().equals(surname) && student.getUniversity().equals(university)) {
+                    result.add(student);
+                    break;
+                }
             }
         new ViewIO().doOperationIO(result);
         return result;
