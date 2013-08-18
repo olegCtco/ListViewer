@@ -10,9 +10,11 @@ import java.io.IOException;
 public class RemoveIO implements OperationsIO {
     Checker checker;
     BufferedReader localBf;
+    private String mnemonics;
 
-    public RemoveIO() {
+    public RemoveIO(String mnemonics) {
         checker = new Checker();
+        this.mnemonics=mnemonics;
     }
 
     @Override
@@ -35,6 +37,6 @@ public class RemoveIO implements OperationsIO {
 
     @Override
     public String getMnemonics() {
-        return Operation.REMOVE.name();
+        return mnemonics;
     }
 }
