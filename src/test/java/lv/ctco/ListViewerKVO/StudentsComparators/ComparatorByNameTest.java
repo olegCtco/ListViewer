@@ -26,7 +26,7 @@ public class ComparatorByNameTest {
     }
 
     @Test
-    public void testCompareSortByNameNotHappens() {
+    public void testCompareSortByNameEqual() {
         Student student1 = new Student("Janis", "Berzins", "RTU");
         Student student2 = new Student("Janis", "Berzins", "RTU");
         assertTrue(new ComparatorByName().compare(student1, student2) == 0);
@@ -39,4 +39,45 @@ public class ComparatorByNameTest {
         assertTrue(new ComparatorByName().compare(student1, student2) < 0);
     }
 
+    @Test
+    public void testCompareSortByNameNotRequiredBySurnameRequired() {
+        Student student1 = new Student("Janis", "Kalnins", "RTU");
+        Student student2 = new Student("Janis", "Berzins", "RTU");
+        assertTrue(new ComparatorByName().compare(student1, student2) > 0);
+    }
+
+    @Test
+    public void testCompareSortByNameNotRequiredBySurnameEqual() {
+        Student student1 = new Student("Janis", "Berzins", "RTU");
+        Student student2 = new Student("Janis", "Berzins", "RTU");
+        assertTrue(new ComparatorByName().compare(student1, student2) == 0);
+    }
+
+    @Test
+    public void testCompareSortByNameNotRequiredBySurnameNotRequired() {
+        Student student1 = new Student("Janis", "Berzins", "RTU");
+        Student student2 = new Student("Janis", "Kalnins", "RTU");
+        assertTrue(new ComparatorByName().compare(student1, student2) < 0);
+    }
+
+    @Test
+    public void testCompareSortByNameNotRequiredBySurnameNotRequiredByUniversityRequired() {
+        Student student1 = new Student("Janis", "Berzins", "RTU");
+        Student student2 = new Student("Janis", "Berzins", "LU");
+        assertTrue(new ComparatorByName().compare(student1, student2) > 0);
+    }
+
+    @Test
+    public void testCompareSortByNameNotRequiredBySurnameNotRequiredByUniversityEqual() {
+        Student student1 = new Student("Janis", "Berzins", "RTU");
+        Student student2 = new Student("Janis", "Berzins", "RTU");
+        assertTrue(new ComparatorByName().compare(student1, student2) == 0);
+    }
+
+    @Test
+    public void testCompareSortByNameNotRequiredBySurnameByNotRequiredUniversityNotRequired() {
+        Student student1 = new Student("Janis", "Berzins", "LU");
+        Student student2 = new Student("Janis", "Berzins", "RTU");
+        assertTrue(new ComparatorByName().compare(student1, student2) < 0);
+    }
 }

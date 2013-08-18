@@ -20,7 +20,7 @@ public class RemoveIO implements OperationsIO {
         try {
             while (true) {
                 deleteItemIndex[0] = bf.readLine();
-                if (checker.notANumber(deleteItemIndex[0])) {
+                if (checker.notAnInteger(deleteItemIndex[0])) {
                     System.out.println("Input correct number");
                     deleteItemIndex[0] = "-1";
                 } else break;

@@ -10,11 +10,15 @@ public class Checker implements OperationsList {
     }
 
     public boolean checkIfEmptyString(String value) {
-        if (value.equals("") || value.equals(null)) return true;
-        return false;
+        try {
+            if (value.equals("") || value.equals(null)) return true;
+            return false;
+        } catch (NullPointerException e) {
+            return true;
+        }
     }
 
-    public boolean notANumber(String index) {
+    public boolean notAnInteger(String index) {
         try {
             Integer.parseInt(index);
             return false;
