@@ -12,12 +12,8 @@ import static org.junit.Assert.assertEquals;
 
 public class RemoveTest {
     @Test
-    public void testGetOperation() {
-        assertEquals(new Remove().getOperation(), Operation.REMOVE.name());
-    }
-
-    @Test
     public void testDoOperationBeforeRange() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.REMOVE.name();
         String index = "0";
         String name = "Janis";
@@ -28,11 +24,12 @@ public class RemoveTest {
         stringList.add(operation);
         stringList.add(index);
         studentList.add(new Student(name, surname, university));
-        assertEquals(new Remove().doOperation(stringList), studentList);
+        assertEquals(studentList, new Remove().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationInRange() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.REMOVE.name();
         String index = "1";
         String name = "Janis";
@@ -42,13 +39,13 @@ public class RemoveTest {
         List<Student> studentList = StudentsList.getStudentList();
         stringList.add(operation);
         stringList.add(index);
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
-        assertEquals(new Remove().doOperation(stringList), new ArrayList<Student>());
+        assertEquals(new ArrayList<Student>(), new Remove().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationAfterRange() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.REMOVE.name();
         String index = "2";
         String name = "Janis";
@@ -58,8 +55,7 @@ public class RemoveTest {
         List<Student> studentList = StudentsList.getStudentList();
         stringList.add(operation);
         stringList.add(index);
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
-        assertEquals(new Remove().doOperation(stringList), studentList);
+        assertEquals(studentList, new Remove().doOperation(stringList));
     }
 }

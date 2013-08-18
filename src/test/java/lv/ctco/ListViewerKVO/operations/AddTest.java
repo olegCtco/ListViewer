@@ -13,14 +13,9 @@ import static org.junit.Assert.assertFalse;
 
 public class AddTest {
     @Test
-    public void testGetOperation() {
-        assertEquals(new Add().getOperation(), Operation.ADD.name());
-    }
-
-    @Test
     public void testDoOperationEquals() {
-        String operation = Operation.ADD.name();
         StudentsList.getStudentList().clear();
+        String operation = Operation.ADD.name();
         String name = "Janis";
         String surname = "Berzins";
         String university = "RTU";
@@ -30,13 +25,13 @@ public class AddTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
-        assertEquals(studentList,new Add().doOperation(stringList));
+        assertEquals(studentList, new Add().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationFalse() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.ADD.name();
         String name = "Janis";
         String surname = "Berzins";
@@ -48,7 +43,6 @@ public class AddTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university1);
-        studentList.clear();
         studentList.add(new Student(name, surname, university2));
         List<Student> studentList1 = (List<Student>) new Add().doOperation(stringList);
         assertFalse(studentList1.equals(studentList));

@@ -22,7 +22,7 @@ public class ExitIOTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        assertTrue(Arrays.equals(exitIO.doOperationIO(), new String[]{Operation.EXIT.name()}));
+        assertTrue(Arrays.equals(new String[]{Operation.EXIT.name()}, exitIO.doOperationIO()));
     }
 
     @Test

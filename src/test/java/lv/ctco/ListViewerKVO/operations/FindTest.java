@@ -12,12 +12,8 @@ import static org.junit.Assert.assertEquals;
 
 public class FindTest {
     @Test
-    public void testGetOperation() {
-        assertEquals(new Find().getOperation(), Operation.FIND.name());
-    }
-
-    @Test
     public void testDoOperationNameEmptySurnameEmptyUniversityEmpty() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name = "";
         String surname = "";
@@ -28,12 +24,12 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameEmptySurnameExistUniversityExist() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name = "";
         String surname = "Berzins";
@@ -44,13 +40,13 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameEmptySurnameExistUniversityExistFindTwo() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name1 = "";
         String name2 = "Janis";
@@ -63,14 +59,14 @@ public class FindTest {
         stringList.add(name1);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name2, surname, university));
         studentList.add(new Student(name3, surname, university));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameExistSurnameEmptyUniversityExist() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name = "Janis";
         String surname = "";
@@ -81,13 +77,13 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameExistSurnameEmptyUniversityExistFindTwo() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name = "Janis";
         String surname1 = "";
@@ -100,14 +96,14 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname1);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name, surname2, university));
         studentList.add(new Student(name, surname3, university));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameExistSurnameExistUniversityEmpty() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name = "Janis";
         String surname = "Berzins";
@@ -118,13 +114,13 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameExistSurnameExistUniversityEmptyFindTwo() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name = "Janis";
         String surname = "Berzins";
@@ -137,14 +133,14 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university1);
-        studentList.clear();
         studentList.add(new Student(name, surname, university2));
         studentList.add(new Student(name, surname, university3));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameEmptySurnameEmptyUniversityExist() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name = "";
         String surname = "";
@@ -155,13 +151,13 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameEmptySurnameEmptyUniversityExistFindTwo() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name = "";
         String name1 = "Janis";
@@ -176,14 +172,14 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name1, surname1, university));
         studentList.add(new Student(name2, surname2, university));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameExistSurnameEmptyUniversityEmpty() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name = "Janis";
         String surname = "";
@@ -194,13 +190,13 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameExistSurnameEmptyUniversityEmptyFindTwo() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name = "Janis";
         String surname = "";
@@ -215,14 +211,14 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university1);
-        studentList.clear();
         studentList.add(new Student(name, surname1, university2));
         studentList.add(new Student(name, surname2, university3));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameEmptySurnameExistUniversityEmpty() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name = "";
         String surname = "Berzins";
@@ -233,13 +229,13 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameEmptySurnameExistUniversityEmptyFindTwo() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name1 = "";
         String name2 = "Janis";
@@ -254,14 +250,14 @@ public class FindTest {
         stringList.add(name1);
         stringList.add(surname);
         stringList.add(university1);
-        studentList.clear();
         studentList.add(new Student(name2, surname, university2));
         studentList.add(new Student(name3, surname, university3));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameExistSurnameExistUniversityExist() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name = "Janis";
         String surname = "Berzins";
@@ -272,13 +268,13 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationNameExistSurnameExistUniversityExistFindTwo() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.FIND.name();
         String name = "Janis";
         String surname = "Berzins";
@@ -289,9 +285,8 @@ public class FindTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
         studentList.add(new Student(name, surname, university));
-        assertEquals(new Find().doOperation(stringList), studentList);
+        assertEquals(studentList, new Find().doOperation(stringList));
     }
 }

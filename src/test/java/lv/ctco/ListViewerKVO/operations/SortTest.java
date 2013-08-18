@@ -12,12 +12,8 @@ import static org.junit.Assert.assertEquals;
 
 public class SortTest {
     @Test
-    public void testGetOperation() {
-        assertEquals(new Sort().getOperation(), Operation.SORT.name());
-    }
-
-    @Test
     public void testDoOperationWithoutAnyComparator() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.SORT.name();
         String name = "";
         String surname = "";
@@ -34,14 +30,14 @@ public class SortTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name1, surname1, university1));
         studentList.add(new Student(name2, surname2, university2));
-        assertEquals(new Sort().doOperation(stringList), studentList);
+        assertEquals(studentList, new Sort().doOperation(stringList));
     }
 
     @Test
     public void testDoOperationByName() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.SORT.name();
         String name = "Y";
         String surname = "";
@@ -58,14 +54,14 @@ public class SortTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name1, surname1, university1));
         studentList.add(new Student(name2, surname2, university2));
-        assertEquals(new Sort().doOperation(stringList).get(0).getName(), name2);
+        assertEquals(name2, new Sort().doOperation(stringList).get(0).getName());
     }
 
     @Test
     public void testDoOperationBySurname() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.SORT.name();
         String name = "";
         String surname = "Y";
@@ -82,14 +78,14 @@ public class SortTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name1, surname1, university1));
         studentList.add(new Student(name2, surname2, university2));
-        assertEquals(new Sort().doOperation(stringList).get(0).getSurname(), surname2);
+        assertEquals(surname2, new Sort().doOperation(stringList).get(0).getSurname());
     }
 
     @Test
     public void testDoOperationByUniversity() {
+        StudentsList.getStudentList().clear();
         String operation = Operation.SORT.name();
         String name = "";
         String surname = "";
@@ -106,9 +102,8 @@ public class SortTest {
         stringList.add(name);
         stringList.add(surname);
         stringList.add(university);
-        studentList.clear();
         studentList.add(new Student(name1, surname1, university1));
         studentList.add(new Student(name2, surname2, university2));
-        assertEquals(new Sort().doOperation(stringList).get(0).getUniversity(), university2);
+        assertEquals(university2, new Sort().doOperation(stringList).get(0).getUniversity());
     }
 }

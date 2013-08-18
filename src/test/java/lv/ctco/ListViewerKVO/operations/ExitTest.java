@@ -1,6 +1,5 @@
 package lv.ctco.ListViewerKVO.operations;
 
-import lv.ctco.ListViewerKVO.Operation;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -9,17 +8,12 @@ import static org.junit.Assert.assertEquals;
 
 public class ExitTest {
     @Test
-    public void testGetOperation() {
-        assertEquals(new Exit().getOperation(), Operation.EXIT.name());
-    }
-
-    @Test
     public void testDoOperation() {
-        assertEquals(new Exit().doOperation(Arrays.asList("1")), null);
+        assertEquals(null, new Exit().doOperation(Arrays.asList("1")));
     }
 
     @Test
     public void testDoOperationException() {
-        assertEquals(new Exit().doOperation(Arrays.asList("")), null);
+        assertEquals(null, new Exit().doOperation(Arrays.asList("")));
     }
 }

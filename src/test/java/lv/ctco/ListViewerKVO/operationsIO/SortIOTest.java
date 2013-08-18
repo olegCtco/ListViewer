@@ -1,6 +1,5 @@
 package lv.ctco.ListViewerKVO.operationsIO;
 
-import lv.ctco.ListViewerKVO.Operation;
 import org.junit.Test;
 
 import java.io.BufferedReader;
@@ -17,14 +16,14 @@ public class SortIOTest {
         String byName = "";
         String bySurname = "";
         String byUniversity = "";
-        SortIO sortIO= new SortIO("Sort");
+        SortIO sortIO = new SortIO("Sort");
         sortIO.localBf = mock(BufferedReader.class);
         try {
             when(sortIO.localBf.readLine()).thenReturn(byName).thenReturn(bySurname).thenReturn(byUniversity);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        assertTrue(Arrays.equals(sortIO.doOperationIO(), new String[]{byName, bySurname, byUniversity, null}));
+        assertTrue(Arrays.equals(new String[]{byName, bySurname, byUniversity, null}, sortIO.doOperationIO()));
     }
 
     @Test
@@ -32,14 +31,14 @@ public class SortIOTest {
         String byName = "Y";
         String bySurname = "";
         String byUniversity = "";
-        SortIO sortIO= new SortIO("Sort");
+        SortIO sortIO = new SortIO("Sort");
         sortIO.localBf = mock(BufferedReader.class);
         try {
             when(sortIO.localBf.readLine()).thenReturn(byName).thenReturn(bySurname).thenReturn(byUniversity);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        assertTrue(Arrays.equals(sortIO.doOperationIO(), new String[]{byName, bySurname, byUniversity, null}));
+        assertTrue(Arrays.equals(new String[]{byName, bySurname, byUniversity, null}, sortIO.doOperationIO()));
     }
 
     @Test
@@ -47,14 +46,14 @@ public class SortIOTest {
         String byName = "";
         String bySurname = "Y";
         String byUniversity = "";
-        SortIO sortIO= new SortIO("Sort");
+        SortIO sortIO = new SortIO("Sort");
         sortIO.localBf = mock(BufferedReader.class);
         try {
             when(sortIO.localBf.readLine()).thenReturn(byName).thenReturn(bySurname).thenReturn(byUniversity);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        assertTrue(Arrays.equals(sortIO.doOperationIO(), new String[]{byName, bySurname, byUniversity, null}));
+        assertTrue(Arrays.equals(new String[]{byName, bySurname, byUniversity, null}, sortIO.doOperationIO()));
     }
 
     @Test
@@ -62,13 +61,13 @@ public class SortIOTest {
         String byName = "";
         String bySurname = "";
         String byUniversity = "Y";
-        SortIO sortIO= new SortIO("Sort");
+        SortIO sortIO = new SortIO("Sort");
         sortIO.localBf = mock(BufferedReader.class);
         try {
             when(sortIO.localBf.readLine()).thenReturn(byName).thenReturn(bySurname).thenReturn(byUniversity);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        assertTrue(Arrays.equals(sortIO.doOperationIO(), new String[]{byName, bySurname, byUniversity, null}));
+        assertTrue(Arrays.equals(new String[]{byName, bySurname, byUniversity, null}, sortIO.doOperationIO()));
     }
 }

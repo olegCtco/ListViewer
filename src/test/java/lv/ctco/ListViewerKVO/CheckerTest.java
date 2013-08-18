@@ -61,33 +61,33 @@ public class CheckerTest {
 
     @Test
     public void testOutOfBoundTrueBeforeRange() {
+        StudentsList.getStudentList().clear();
         String name = "Janis";
         String surname = "Berzins";
         String university = "RTU";
         List<Student> studentList = StudentsList.getStudentList();
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
         assertTrue(new Checker().outOfBound(studentList, -1));
     }
 
     @Test
     public void testOutOfBoundFalseInRange() {
+        StudentsList.getStudentList().clear();
         String name = "Janis";
         String surname = "Berzins";
         String university = "RTU";
         List<Student> studentList = StudentsList.getStudentList();
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
         assertFalse(new Checker().outOfBound(studentList, 0));
     }
 
     @Test
     public void testOutOfBoundTrueInRange() {
+        StudentsList.getStudentList().clear();
         String name = "Janis";
         String surname = "Berzins";
         String university = "RTU";
         List<Student> studentList = StudentsList.getStudentList();
-        studentList.clear();
         studentList.add(new Student(name, surname, university));
         assertTrue(new Checker().outOfBound(studentList, 1));
     }

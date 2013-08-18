@@ -10,12 +10,12 @@ public class ComparatorByUniversityTest {
     @Test
     public void testCompareNotStudent() {
         Student student = new Student("Janis", "Berzins", "RTU");
-        assertEquals(new ComparatorByUniversity().compare(new Object(), student), -1);
+        assertEquals(-1, new ComparatorByUniversity().compare(new Object(), student));
     }
 
     @Test
     public void testCompareNotStudents() {
-        assertEquals(new ComparatorByUniversity().compare(new Object(), new Object()), -1);
+        assertEquals(-1, new ComparatorByUniversity().compare(new Object(), new Object()));
     }
 
     @Test
@@ -29,7 +29,7 @@ public class ComparatorByUniversityTest {
     public void testCompareSortByUniversityEqual() {
         Student student1 = new Student("Janis", "Berzins", "RTU");
         Student student2 = new Student("Janis", "Berzins", "RTU");
-        assertEquals(new ComparatorByUniversity().compare(student1, student2), 0);
+        assertEquals(0, new ComparatorByUniversity().compare(student1, student2));
     }
 
     @Test
@@ -50,7 +50,7 @@ public class ComparatorByUniversityTest {
     public void testCompareSortByUniversityNotRequiredByNameEqual() {
         Student student1 = new Student("Janis", "Berzins", "RTU");
         Student student2 = new Student("Janis", "Berzins", "RTU");
-        assertEquals(new ComparatorByUniversity().compare(student1, student2), 0);
+        assertEquals(0, new ComparatorByUniversity().compare(student1, student2));
     }
 
     @Test
@@ -71,7 +71,7 @@ public class ComparatorByUniversityTest {
     public void testCompareSortByUniversityNotRequiredByNameNotRequiredBySurnameEqual() {
         Student student1 = new Student("Janis", "Berzins", "RTU");
         Student student2 = new Student("Janis", "Berzins", "RTU");
-        assertEquals(new ComparatorByUniversity().compare(student1, student2), 0);
+        assertEquals(0, new ComparatorByUniversity().compare(student1, student2));
     }
 
     @Test

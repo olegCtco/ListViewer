@@ -24,6 +24,6 @@ public class AddIOTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        assertTrue(Arrays.equals(addIO.doOperationIO(), new String[]{name, surname, university, null}));
+        assertTrue(Arrays.equals(new String[]{name, surname, university, null}, addIO.doOperationIO()));
     }
 }
