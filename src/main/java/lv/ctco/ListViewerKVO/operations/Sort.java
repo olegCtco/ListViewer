@@ -25,22 +25,18 @@ public class Sort implements Operations {
         String university = values.get(3);
         List<Student> result = StudentsList.getStudentList();
         if (!name.equalsIgnoreCase("Y") && !surname.equalsIgnoreCase("Y") && !university.equalsIgnoreCase("Y")) {
-            new ViewIO().doOperationIO(result);
             return result;
         }
         if (name.equalsIgnoreCase("Y")) {
             Collections.sort(result, new ComparatorByName());
-            new ViewIO().doOperationIO(result);
             return result;
         }
         if (surname.equalsIgnoreCase("Y")) {
             Collections.sort(result, new ComparatorBySurname());
-            new ViewIO().doOperationIO(result);
             return result;
         }
         if (university.equalsIgnoreCase("Y")) {
             Collections.sort(result, new ComparatorByUniversity());
-            new ViewIO().doOperationIO(result);
             return result;
         }
         return null;

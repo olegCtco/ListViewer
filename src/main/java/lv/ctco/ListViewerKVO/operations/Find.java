@@ -53,7 +53,6 @@ public class Find implements Operations {
                     continue;
                 }
             }
-        new ViewIO().doOperationIO(result);
         return result;
     }
 }
