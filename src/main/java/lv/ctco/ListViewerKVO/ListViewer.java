@@ -17,6 +17,7 @@ public class ListViewer implements OperationsList {
 
     public void start() {
         while (true) {
+            resultList = StudentsList.getStudentList();
             values = consoleIO.readFromConsole();
             String operation = values.get(0);
             if (operation.equalsIgnoreCase(Operation.VIEW.name()))

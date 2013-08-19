@@ -14,6 +14,7 @@ public class RemoveIO implements OperationsIO {
     public RemoveIO(String mnemonics) {
         checker = new Checker();
         this.mnemonics = mnemonics;
+        localBf=bf;
     }
 
     @Override

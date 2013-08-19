@@ -20,7 +20,7 @@ public class Remove implements Operations {
     public Object doOperation(List<String> values) {
         List<Student> studentList = StudentsList.getStudentList();
         int indexDelete = Integer.parseInt(values.get(1)) - 1;
-        if (!checker.outOfBound(studentList, indexDelete)) studentList.remove(indexDelete);
+        if (!checker.outOfBound(studentList, indexDelete)) StudentsList.getStudentList().remove(indexDelete);
         return studentList;
     }
 }

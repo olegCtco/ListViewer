@@ -15,9 +15,8 @@ public class Add implements Operations {
 
     @Override
     public Object doOperation(List<String> values) {
-        List<Student> studentList = StudentsList.getStudentList();
         Student student = new Student(values.get(1), values.get(2), values.get(3));
-        studentList.add(student);
-        return studentList;
+        StudentsList.getStudentList().add(student);
+        return StudentsList.getStudentList();
     }
 }
