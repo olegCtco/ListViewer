@@ -16,10 +16,10 @@ public class Find implements Operations {
 
     @Override
     public List<Student> doOperation(List<String> values) {
-        String name = values.get(1);
-        String surname = values.get(2);
-        String university = values.get(3);
-        List<Student> result = new ArrayList<>();
+        String name = values.get(0);
+        String surname = values.get(1);
+        String university = values.get(2);
+        List<Student> result = new ArrayList<Student>();
         if ((name.equals("") && surname.equals("") && university.equals(""))) return result;
         else
             for (Student student : StudentsList.getStudentList()) {
@@ -52,6 +52,8 @@ public class Find implements Operations {
                     continue;
                 }
             }
+        StudentsList.getTmpList().clear();
+        StudentsList.getTmpList().addAll(result);
         return result;
     }
 }

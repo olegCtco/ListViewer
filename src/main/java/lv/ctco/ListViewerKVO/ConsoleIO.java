@@ -24,17 +24,17 @@ public class ConsoleIO {
     public void menu() {
         System.out.println("Hi User" +
                 "\n Choose what you want to do:" +
-                "\n ADD    -> Add student to list" +
+                "\n ADD    -> AddServlet student to list" +
                 "\n REMOVE -> Remove student form list" +
                 "\n VIEW   -> View students list" +
-                "\n FIND   -> Find students" +
+                "\n FIND   -> FindServlet students" +
                 "\n SORT   -> Sort students list" +
                 "\n EXIT   -> Quit application");
     }
 
     public List<String> readFromConsole() {
         String operation;
-        List<String> values = new ArrayList<>();
+        List<String> values = new ArrayList<String>();
         String operationMnemonic;
         while (true) try {
             menu();
