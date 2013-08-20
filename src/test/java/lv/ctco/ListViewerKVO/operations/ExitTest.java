@@ -1,4 +1,4 @@
-package lv.ctco.ListViewerKVO.operations;
+package lv.ctco.listViewerKVO.operations;
 
 import org.junit.Test;
 

@@ -1,6 +1,6 @@
-package lv.ctco.ListViewerKVO;
+package lv.ctco.listViewerKVO;
 
-import lv.ctco.ListViewerKVO.operationsIO.*;
+import lv.ctco.listViewerKVO.operationsIO.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;

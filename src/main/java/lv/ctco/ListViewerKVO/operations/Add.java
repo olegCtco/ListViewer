@@ -1,9 +1,9 @@
-package lv.ctco.ListViewerKVO.operations;
+package lv.ctco.listViewerKVO.operations;
 
-import lv.ctco.ListViewerKVO.Operation;
-import lv.ctco.ListViewerKVO.Operations;
-import lv.ctco.ListViewerKVO.Student;
-import lv.ctco.ListViewerKVO.StudentsList;
+import lv.ctco.listViewerKVO.Operation;
+import lv.ctco.listViewerKVO.Operations;
+import lv.ctco.listViewerKVO.Student;
+import lv.ctco.listViewerKVO.StudentsList;
 
 import java.util.List;
 

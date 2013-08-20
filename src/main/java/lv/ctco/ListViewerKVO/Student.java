@@ -1,4 +1,4 @@
-package lv.ctco.ListViewerKVO;
+package lv.ctco.listViewerKVO;
 
 public class Student {
     private String name;

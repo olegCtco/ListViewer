@@ -1,6 +1,6 @@
-package lv.ctco.ListViewerKVO.studentsComparators;
+package lv.ctco.listViewerKVO.studentsComparators;
 
-import lv.ctco.ListViewerKVO.Student;
+import lv.ctco.listViewerKVO.Student;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

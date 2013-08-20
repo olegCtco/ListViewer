@@ -1,6 +1,6 @@
-package lv.ctco.ListViewerKVO;
+package lv.ctco.listViewerKVO;
 
-import lv.ctco.ListViewerKVO.operationsIO.ViewIO;
+import lv.ctco.listViewerKVO.operationsIO.ViewIO;
 
 import java.util.ArrayList;
 import java.util.List;

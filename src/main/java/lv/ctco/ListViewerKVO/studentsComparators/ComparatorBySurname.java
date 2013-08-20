@@ -1,6 +1,6 @@
-package lv.ctco.ListViewerKVO.studentsComparators;
+package lv.ctco.listViewerKVO.studentsComparators;
 
-import lv.ctco.ListViewerKVO.Student;
+import lv.ctco.listViewerKVO.Student;
 
 import java.util.Comparator;
 

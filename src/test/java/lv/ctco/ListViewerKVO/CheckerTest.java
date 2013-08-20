@@ -1,4 +1,4 @@
-package lv.ctco.ListViewerKVO;
+package lv.ctco.listViewerKVO;
 
 import org.junit.Before;
 import org.junit.Test;
